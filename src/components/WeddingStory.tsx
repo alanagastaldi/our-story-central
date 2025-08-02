@@ -1,5 +1,7 @@
 import { Clock, MapPin, Gift, Music, Users, MessageSquare, Camera, Shirt } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useState } from "react";
 
 interface StoryItem {
@@ -12,6 +14,21 @@ interface StoryItem {
 
 const WeddingStory = () => {
   const [selectedStory, setSelectedStory] = useState<string | null>(null);
+  const [rsvpName, setRsvpName] = useState("");
+
+  const handleRSVP = (status: 'sim' | 'nao') => {
+    if (!rsvpName.trim()) {
+      alert("Por favor, informe seu nome primeiro!");
+      return;
+    }
+    
+    const message = status === 'sim' 
+      ? `Confirmação registrada para: ${rsvpName} ✅` 
+      : `${rsvpName} - Não poderá comparecer ❌`;
+    
+    alert(message);
+    setRsvpName("");
+  };
 
   const stories: StoryItem[] = [
     {
@@ -93,19 +110,42 @@ const WeddingStory = () => {
     {
       id: "rsvp",
       icon: <Users className="w-6 h-6" />,
-      label: "RSVP",
+      label: "Confirmar Presença",
       emoji: "📬",
       content: (
         <div className="text-center space-y-4">
           <h3 className="text-xl font-semibold text-primary">Confirmação de Presença</h3>
           <p className="text-sm text-muted-foreground">Por favor, confirme sua presença até 15 dias antes</p>
-          <div className="space-y-2">
-            <Button className="w-full bg-green-600 hover:bg-green-700">
-              ✅ Vou comparecer
-            </Button>
-            <Button className="w-full" variant="outline">
-              ❌ Não poderei ir
-            </Button>
+          
+          <div className="space-y-3">
+            <div className="text-left">
+              <Label htmlFor="rsvp-name" className="text-sm font-medium">
+                Nome(s) dos convidados
+              </Label>
+              <Input
+                id="rsvp-name"
+                placeholder="Ex: Alana e Matheus"
+                value={rsvpName}
+                onChange={(e) => setRsvpName(e.target.value)}
+                className="mt-1"
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <Button 
+                className="w-full bg-green-600 hover:bg-green-700"
+                onClick={() => handleRSVP('sim')}
+              >
+                ✅ Vou comparecer
+              </Button>
+              <Button 
+                className="w-full" 
+                variant="outline"
+                onClick={() => handleRSVP('nao')}
+              >
+                ❌ Não poderei comparecer
+              </Button>
+            </div>
           </div>
         </div>
       )
