@@ -61,6 +61,12 @@ const Index = () => {
       <div className="container mx-auto px-4 pb-8">
         {activeSection === "inicio" && (
           <div className="space-y-8">
+            {/* Stories Section - Moved to top */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Informações do Evento</h2>
+              <WeddingStory />
+            </div>
+
             {/* Welcome Message */}
             <Card className="border-wedding-pink bg-gradient-to-r from-card to-wedding-pink-soft">
               <CardContent className="p-6 text-center">
@@ -84,12 +90,6 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Stories Section */}
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold">Informações do Evento</h2>
-              <WeddingStory />
-            </div>
 
             {/* Quick Info Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
