@@ -16,6 +16,7 @@ import {
   X
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Moodboard from "@/components/Moodboard";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -223,6 +224,9 @@ const CentralNoivas = () => {
             </Button>
           </div>
         );
+      
+      case "moodboard":
+        return <Moodboard />;
       
       default:
         return (
