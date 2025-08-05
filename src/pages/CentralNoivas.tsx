@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Moodboard from "@/components/Moodboard";
+import PainelFinanceiro from "@/components/PainelFinanceiro";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -227,6 +228,9 @@ const CentralNoivas = () => {
       
       case "moodboard":
         return <Moodboard />;
+      
+      case "financeiro":
+        return <PainelFinanceiro />;
       
       default:
         return (
