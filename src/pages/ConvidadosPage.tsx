@@ -179,61 +179,88 @@ const ConvidadosPage = () => {
       <div className="max-w-4xl mx-auto px-4 py-6">
         {/* Stories Tab */}
         {activeTab === 'stories' && (
-          <div className="space-y-6">
-            {/* Stories Navigation */}
-            <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-2">
+          <div className="space-y-8">
+            {/* Stories Navigation - Instagram Style */}
+            <div className="flex gap-6 overflow-x-auto scrollbar-hide px-4 py-6">
               {stories.map((story) => (
                 <button
                   key={story.id}
                   onClick={() => setSelectedStory(selectedStory === story.id ? '' : story.id)}
-                  className={`flex-shrink-0 flex flex-col items-center space-y-2 p-3 rounded-xl transition-all scale-hover ${
-                    selectedStory === story.id 
-                      ? 'bg-wedding-pink-light shadow-story' 
-                      : 'bg-card hover:bg-wedding-pink-soft'
-                  }`}
+                  className="flex-shrink-0 flex flex-col items-center space-y-3 group"
                 >
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center text-wedding-dark border-2 transition-colors ${
-                    selectedStory === story.id 
-                      ? 'bg-wedding-pink border-wedding-dark' 
-                      : 'bg-wedding-pink-soft border-wedding-pink'
-                  }`}>
-                    {story.icon}
+                  {/* Story Circle with Gradient Border */}
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-full p-1 transition-all duration-300 ${
+                      selectedStory === story.id 
+                        ? 'bg-gradient-to-r from-wedding-pink via-wedding-pink-light to-wedding-pink scale-110' 
+                        : 'bg-gradient-to-r from-wedding-pink-soft to-wedding-pink-light group-hover:from-wedding-pink group-hover:to-wedding-pink-light'
+                    }`}>
+                      <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
+                        <div className={`text-wedding-dark transition-transform duration-300 ${
+                          selectedStory === story.id ? 'scale-110' : 'group-hover:scale-105'
+                        }`}>
+                          {story.icon}
+                        </div>
+                      </div>
+                    </div>
+                    {/* Story Emoji */}
+                    <div className="absolute -bottom-1 -right-1 text-lg bg-background rounded-full w-8 h-8 flex items-center justify-center border-2 border-wedding-pink-light">
+                      {story.emoji}
+                    </div>
                   </div>
-                  <span className="text-xs font-medium text-center text-primary">
+                  
+                  {/* Story Label */}
+                  <span className={`text-sm font-medium transition-colors duration-300 ${
+                    selectedStory === story.id 
+                      ? 'text-primary font-semibold' 
+                      : 'text-muted-foreground group-hover:text-primary'
+                  }`}>
                     {story.label}
                   </span>
                 </button>
               ))}
             </div>
 
-            {/* Selected Story Content */}
+            {/* Selected Story Content - Full Width Card */}
             {selectedStory && (
-              <Card className="animate-in slide-in-from-bottom-4 shadow-elegant">
-                <CardContent className="p-6">
-                  {stories.find(s => s.id === selectedStory)?.content}
-                </CardContent>
-              </Card>
+              <div className="animate-in slide-in-from-bottom-4 duration-500">
+                <Card className="border-0 shadow-elegant bg-gradient-to-br from-background to-wedding-pink-soft/30">
+                  <CardContent className="p-8">
+                    <div className="max-w-2xl mx-auto">
+                      {stories.find(s => s.id === selectedStory)?.content}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             )}
 
-            {/* Quick Actions */}
-            <div className="grid grid-cols-2 gap-4">
-              <Button 
-                variant="outline" 
-                onClick={() => setActiveTab('gallery')}
-                className="h-20 flex-col space-y-2 hover:bg-wedding-pink-soft"
-              >
-                <Camera className="w-6 h-6" />
-                <span>Ver Fotos</span>
-              </Button>
-              <Button 
-                variant="outline" 
-                onClick={() => setActiveTab('messages')}
-                className="h-20 flex-col space-y-2 hover:bg-wedding-pink-soft"
-              >
-                <MessageCircle className="w-6 h-6" />
-                <span>Deixar Mensagem</span>
-              </Button>
-            </div>
+            {/* Welcome Message when no story selected */}
+            {!selectedStory && (
+              <div className="text-center py-12 animate-in fade-in duration-700">
+                <div className="text-6xl mb-4">💕</div>
+                <h3 className="text-2xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
+                <p className="text-muted-foreground mb-8 max-w-md mx-auto">
+                  Toque nos círculos acima para ver todas as informações importantes sobre o nosso casamento
+                </p>
+                <div className="flex justify-center gap-4">
+                  <Button 
+                    variant="outline" 
+                    onClick={() => setActiveTab('gallery')}
+                    className="hover:bg-wedding-pink-soft border-wedding-pink"
+                  >
+                    <Camera className="w-4 h-4 mr-2" />
+                    Ver Galeria
+                  </Button>
+                  <Button 
+                    onClick={() => setActiveTab('messages')}
+                    className="bg-wedding-dark hover:bg-wedding-dark/90"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Deixar Mensagem
+                  </Button>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
