@@ -180,45 +180,50 @@ const ConvidadosPage = () => {
         {/* Stories Tab */}
         {activeTab === 'stories' && (
           <div className="space-y-8">
-            {/* Stories Navigation - Instagram Style */}
-            <div className="flex gap-6 overflow-x-auto scrollbar-hide px-4 py-6">
-              {stories.map((story) => (
-                <button
-                  key={story.id}
-                  onClick={() => setSelectedStory(selectedStory === story.id ? '' : story.id)}
-                  className="flex-shrink-0 flex flex-col items-center space-y-3 group"
-                >
-                  {/* Story Circle with Gradient Border */}
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-full p-1 transition-all duration-300 ${
-                      selectedStory === story.id 
-                        ? 'bg-gradient-to-r from-wedding-pink via-wedding-pink-light to-wedding-pink scale-110' 
-                        : 'bg-gradient-to-r from-wedding-pink-soft to-wedding-pink-light group-hover:from-wedding-pink group-hover:to-wedding-pink-light'
-                    }`}>
-                      <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
-                        <div className={`text-wedding-dark transition-transform duration-300 ${
-                          selectedStory === story.id ? 'scale-110' : 'group-hover:scale-105'
-                        }`}>
-                          {story.icon}
+            {/* Stories Navigation - Instagram Style Centralizado */}
+            <div className="flex justify-center">
+              <div className="flex gap-8 overflow-x-auto scrollbar-hide px-4 py-6 max-w-4xl">
+                {stories.map((story) => (
+                  <button
+                    key={story.id}
+                    onClick={() => setSelectedStory(selectedStory === story.id ? '' : story.id)}
+                    className="flex-shrink-0 flex flex-col items-center space-y-3 group"
+                  >
+                    {/* Story Circle with Emoji Inside */}
+                    <div className="relative">
+                      <div className={`w-20 h-20 rounded-full p-1 transition-all duration-300 ${
+                        selectedStory === story.id 
+                          ? 'bg-gradient-to-r from-wedding-pink via-wedding-pink-light to-wedding-pink scale-110' 
+                          : 'bg-gradient-to-r from-wedding-pink-soft to-wedding-pink-light group-hover:from-wedding-pink group-hover:to-wedding-pink-light'
+                      }`}>
+                        <div className="w-full h-full bg-background rounded-full flex items-center justify-center relative">
+                          {/* Icon */}
+                          <div className={`text-wedding-dark transition-transform duration-300 absolute ${
+                            selectedStory === story.id ? 'scale-90 -translate-y-1' : 'group-hover:scale-95 -translate-y-1'
+                          }`}>
+                            {story.icon}
+                          </div>
+                          {/* Emoji Inside Circle */}
+                          <div className={`text-lg absolute bottom-1 transition-transform duration-300 ${
+                            selectedStory === story.id ? 'scale-110' : 'group-hover:scale-105'
+                          }`}>
+                            {story.emoji}
+                          </div>
                         </div>
                       </div>
                     </div>
-                    {/* Story Emoji */}
-                    <div className="absolute -bottom-1 -right-1 text-lg bg-background rounded-full w-8 h-8 flex items-center justify-center border-2 border-wedding-pink-light">
-                      {story.emoji}
-                    </div>
-                  </div>
-                  
-                  {/* Story Label */}
-                  <span className={`text-sm font-medium transition-colors duration-300 ${
-                    selectedStory === story.id 
-                      ? 'text-primary font-semibold' 
-                      : 'text-muted-foreground group-hover:text-primary'
-                  }`}>
-                    {story.label}
-                  </span>
-                </button>
-              ))}
+                    
+                    {/* Story Label */}
+                    <span className={`text-sm font-medium transition-colors duration-300 text-center min-w-0 ${
+                      selectedStory === story.id 
+                        ? 'text-primary font-semibold' 
+                        : 'text-muted-foreground group-hover:text-primary'
+                    }`}>
+                      {story.label}
+                    </span>
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Selected Story Content - Full Width Card */}
