@@ -22,7 +22,7 @@ const ConvidadosPage = () => {
   const stories: StoryItem[] = [
     {
       id: 'horario',
-      icon: <Clock className="w-6 h-6" />,
+      icon: <span className="text-2xl">⏰</span>,
       label: 'Horário',
       emoji: '⏰',
       content: (
@@ -39,7 +39,7 @@ const ConvidadosPage = () => {
     },
     {
       id: 'local',
-      icon: <MapPin className="w-6 h-6" />,
+      icon: <span className="text-2xl">📍</span>,
       label: 'Local',
       emoji: '📍',
       content: (
@@ -60,7 +60,7 @@ const ConvidadosPage = () => {
     },
     {
       id: 'presentes',
-      icon: <Gift className="w-6 h-6" />,
+      icon: <span className="text-2xl">🎁</span>,
       label: 'Presentes',
       emoji: '🎁',
       content: (
@@ -82,7 +82,7 @@ const ConvidadosPage = () => {
     },
     {
       id: 'confirmacao',
-      icon: <User className="w-6 h-6" />,
+      icon: <span className="text-2xl">📬</span>,
       label: 'RSVP',
       emoji: '📬',
       content: (
@@ -100,7 +100,7 @@ const ConvidadosPage = () => {
     },
     {
       id: 'playlist',
-      icon: <Music className="w-6 h-6" />,
+      icon: <span className="text-2xl">🎵</span>,
       label: 'Playlist',
       emoji: '🎵',
       content: (
@@ -116,7 +116,7 @@ const ConvidadosPage = () => {
     },
     {
       id: 'dresscode',
-      icon: <span className="text-lg">👗</span>,
+      icon: <span className="text-2xl">👗</span>,
       label: 'Dress Code',
       emoji: '👗',
       content: (
@@ -196,18 +196,12 @@ const ConvidadosPage = () => {
                           ? 'bg-gradient-to-r from-wedding-pink via-wedding-pink-light to-wedding-pink scale-110' 
                           : 'bg-gradient-to-r from-wedding-pink-soft to-wedding-pink-light group-hover:from-wedding-pink group-hover:to-wedding-pink-light'
                       }`}>
-                        <div className="w-full h-full bg-background rounded-full flex items-center justify-center relative">
-                          {/* Icon */}
-                          <div className={`text-wedding-dark transition-transform duration-300 absolute ${
-                            selectedStory === story.id ? 'scale-90 -translate-y-1' : 'group-hover:scale-95 -translate-y-1'
-                          }`}>
-                            {story.icon}
-                          </div>
-                          {/* Emoji Inside Circle */}
-                          <div className={`text-lg absolute bottom-1 transition-transform duration-300 ${
+                        <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
+                          {/* Emoji replacing icon */}
+                          <div className={`transition-transform duration-300 ${
                             selectedStory === story.id ? 'scale-110' : 'group-hover:scale-105'
                           }`}>
-                            {story.emoji}
+                            {story.icon}
                           </div>
                         </div>
                       </div>
