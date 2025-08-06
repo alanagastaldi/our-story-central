@@ -266,9 +266,17 @@ const ConvidadosPage = () => {
         {/* Gallery Tab */}
         {activeTab === 'gallery' && (
           <div className="space-y-6">
-            <div className="text-center">
+            <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-2xl font-bold text-primary mb-2">📸 Galeria de Fotos</h2>
-              <p className="text-muted-foreground">Compartilhe e veja os momentos especiais do nosso grande dia!</p>
+              <p className="text-muted-foreground mb-4">Compartilhe e veja os momentos especiais do nosso grande dia!</p>
+              
+              <div className="bg-wedding-pink-soft p-6 rounded-lg text-left">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Para que ninguém fique pedindo fotos no WhatsApp depois do casamento, criamos esta galeria colaborativa. 
+                  Aqui você poderá enviar as fotos e vídeos que registrou durante o casamento. 
+                  Assim, todos os convidados terão acesso às memórias desse momento tão especial.
+                </p>
+              </div>
             </div>
             <PhotoGallery />
           </div>
