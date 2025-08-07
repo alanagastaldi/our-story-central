@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
 import Moodboard from "@/components/Moodboard";
 import PainelFinanceiro from "@/components/PainelFinanceiro";
 import KanbanBoard from "@/components/KanbanBoard";
+import GiftList from "@/components/GiftList";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -142,42 +143,7 @@ const CentralNoivas = () => {
         return <KanbanBoard />;
       
       case "presentes":
-        return (
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <h2 className="text-2xl font-bold">Lista de Presentes</h2>
-              <Button className="bg-pink-600 hover:bg-pink-700">
-                Publicar Lista
-              </Button>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Card>
-                <CardContent className="p-4">
-                  <div className="aspect-square bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                    <Gift className="h-8 w-8 text-gray-400" />
-                  </div>
-                  <h3 className="font-medium">Jogo de Panelas</h3>
-                  <p className="text-sm text-gray-600">R$ 299,90</p>
-                  <Badge className="mt-2 bg-green-100 text-green-800">Disponível</Badge>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardContent className="p-4">
-                  <div className="aspect-square bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                    <Gift className="h-8 w-8 text-gray-400" />
-                  </div>
-                  <h3 className="font-medium">Liquidificador</h3>
-                  <p className="text-sm text-gray-600">R$ 159,90</p>
-                  <Badge className="mt-2 bg-red-100 text-red-800">Comprado</Badge>
-                </CardContent>
-              </Card>
-            </div>
-            <Button className="bg-pink-600 hover:bg-pink-700">
-              + Adicionar Presente
-            </Button>
-          </div>
-        );
+        return <GiftList />;
       
       case "moodboard":
         return <Moodboard />;
