@@ -42,6 +42,7 @@ All colors MUST be HSL.
     --wedding-pink-light: 350 30% 92%;
     --wedding-pink-soft: 350 20% 94%;
     --wedding-dark: 0 0% 8%;
+    --wedding-primary: 350 60% 65%;
     
     /* Shadows and effects */
     --shadow-elegant: 0 4px 20px -2px hsl(350 30% 80% / 0.25);

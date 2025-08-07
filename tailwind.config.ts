@@ -57,7 +57,8 @@ export default {
 					pink: 'hsl(var(--wedding-pink))',
 					'pink-light': 'hsl(var(--wedding-pink-light))',
 					'pink-soft': 'hsl(var(--wedding-pink-soft))',
-					dark: 'hsl(var(--wedding-dark))'
+					dark: 'hsl(var(--wedding-dark))',
+					primary: 'hsl(var(--wedding-primary))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

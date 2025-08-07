@@ -18,6 +18,7 @@ import {
 import { cn } from "@/lib/utils";
 import Moodboard from "@/components/Moodboard";
 import PainelFinanceiro from "@/components/PainelFinanceiro";
+import KanbanBoard from "@/components/KanbanBoard";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -138,55 +139,7 @@ const CentralNoivas = () => {
         );
       
       case "tarefas":
-        return (
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold">Tarefas do Casamento</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">A Fazer</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="p-3 bg-gray-50 rounded-lg border-l-4 border-pink-400">
-                    <p className="font-medium">Escolher vestido</p>
-                    <p className="text-sm text-gray-600">Agendar prova até 15/01</p>
-                  </div>
-                  <div className="p-3 bg-gray-50 rounded-lg border-l-4 border-pink-400">
-                    <p className="font-medium">Confirmar buffet</p>
-                    <p className="text-sm text-gray-600">Degustação marcada</p>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Fazendo</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
-                    <p className="font-medium">Lista de convidados</p>
-                    <p className="text-sm text-gray-600">85% concluído</p>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Concluído</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="p-3 bg-green-50 rounded-lg border-l-4 border-green-400">
-                    <p className="font-medium">Local da cerimônia</p>
-                    <p className="text-sm text-gray-600">Fazenda Vista Alegre</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            <Button className="bg-pink-600 hover:bg-pink-700">
-              + Nova Tarefa
-            </Button>
-          </div>
-        );
+        return <KanbanBoard />;
       
       case "presentes":
         return (
