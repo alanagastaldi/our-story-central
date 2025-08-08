@@ -13,7 +13,8 @@ import {
   Users,
   Lock,
   Menu,
-  X
+  X,
+  ClipboardList
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Moodboard from "@/components/Moodboard";
@@ -22,6 +23,7 @@ import KanbanBoard from "@/components/KanbanBoard";
 import GiftList from "@/components/GiftList";
 import ConfiguracoesPage from "@/components/ConfiguracoesPage";
 import EnxovalList from "@/components/EnxovalList";
+import ChecklistComponent from "@/components/ChecklistComponent";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -30,6 +32,7 @@ const CentralNoivas = () => {
   const sections = [
     { id: "dashboard", label: "Dashboard", icon: Menu, premium: false },
     { id: "tarefas", label: "Tarefas", icon: CheckSquare, premium: false },
+    { id: "checklist", label: "Checklist", icon: ClipboardList, premium: false },
     { id: "presentes", label: "Lista de Presentes", icon: Gift, premium: false },
     { id: "enxoval", label: "Lista de Enxoval", icon: ShoppingBasket, premium: false },
     { id: "design", label: "Editor de Design", icon: Palette, premium: true },
@@ -47,6 +50,14 @@ const CentralNoivas = () => {
       color: "bg-pink-50 border-pink-200",
       premium: false,
       onClick: () => setActiveSection("tarefas")
+    },
+    {
+      title: "Checklist do Casamento",
+      description: "Lista completa de tarefas por prazo",
+      icon: ClipboardList,
+      color: "bg-indigo-50 border-indigo-200",
+      premium: false,
+      onClick: () => setActiveSection("checklist")
     },
     {
       title: "Lista de Presentes",
@@ -143,6 +154,9 @@ const CentralNoivas = () => {
       
       case "tarefas":
         return <KanbanBoard />;
+      
+      case "checklist":
+        return <ChecklistComponent />;
       
       case "presentes":
         return <GiftList />;
