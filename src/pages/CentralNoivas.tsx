@@ -25,6 +25,7 @@ import ConfiguracoesPage from "@/components/ConfiguracoesPage";
 import EnxovalList from "@/components/EnxovalList";
 import ChecklistComponent from "@/components/ChecklistComponent";
 import DesignEditor from "@/components/DesignEditor";
+import GuestManagement from "@/components/GuestManagement";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -173,6 +174,9 @@ const CentralNoivas = () => {
       
       case "design":
         return <DesignEditor />;
+      
+      case "convidados":
+        return <GuestManagement />;
       
       case "configuracoes":
         return <ConfiguracoesPage />;
