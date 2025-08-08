@@ -30,9 +30,15 @@ const Index = () => {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
   const features = [
-    { icon: CheckSquare, title: "💍 Checklist Completo", description: "Organize todas as etapas do seu casamento com elegância" },
-    { icon: Gift, title: "🎁 Lista de Presentes", description: "Compartilhe seus sonhos de forma sofisticada" },
-    { icon: Users, title: "✨ Central dos Convidados", description: "Uma experiência única para seus convidados" }
+    { icon: CheckSquare, title: "Checklist completo", description: "Organize todas as tarefas do seu casamento" },
+    { icon: ShoppingBasket, title: "Lista de enxoval", description: "Pronta e editável conforme sua necessidade" },
+    { icon: DollarSign, title: "Dashboard financeiro", description: "Controle total dos gastos e orçamento" },
+    { icon: Palette, title: "Tarefas estilo Trello", description: "Visualização clara do progresso" },
+    { icon: Image, title: "Mood board personalizado", description: "Pastas organizadas para suas inspirações" },
+    { icon: Users, title: "Central dos Convidados", description: "Área otimizada para seus convidados" },
+    { icon: Edit3, title: "Designer estilo Canva", description: "Crie convites e materiais únicos" },
+    { icon: Gift, title: "Lista de presentes", description: "Compartilhável e fácil de gerenciar" },
+    { icon: Mail, title: "E-mails automáticos", description: "Comunicação eficiente com convidados" }
   ];
 
   const plans = [
@@ -127,19 +133,19 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <h1 className="text-5xl lg:text-7xl font-serif font-bold text-foreground leading-tight">
-                O casamento dos seus <span className="italic text-foreground/80">sonhos</span> merece um planejamento eficiente
+                Transforme o <span className="italic text-foreground/80">caos do casamento</span> em leveza e clareza
               </h1>
               <p className="text-xl text-foreground/70 leading-relaxed max-w-lg">
-                Uma plataforma inteligente e organizada para noivas que valorizam eficiência em cada detalhe
+                Um app criado para noivas que querem se organizar sem perder a magia do momento
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/formulario-pos-pagamento">
                   <Button size="lg" className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg">
-                    Começar Agora
+                    Quero começar agora
                   </Button>
                 </Link>
                 <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-foreground/20 text-foreground hover:bg-foreground hover:text-background transition-all duration-300">
-                  Ver Planos
+                  Comparar planos
                 </Button>
               </div>
             </div>
@@ -158,19 +164,52 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="funcionalidades" className="py-24 px-6 bg-white">
+      {/* Dor da Noiva Moderna */}
+      <section className="py-16 px-6 bg-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-8">
+            Cansada de se organizar em mil lugares diferentes?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <Card className="p-6 bg-gradient-to-br from-accent/30 to-accent/10 border-border/50">
+              <Instagram className="h-12 w-12 text-pink-500 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Prints no Instagram</h3>
+              <p className="text-foreground/60 text-sm">Salvando inspirações que se perdem na galeria</p>
+            </Card>
+            
+            <Card className="p-6 bg-gradient-to-br from-accent/30 to-accent/10 border-border/50">
+              <MessageCircle className="h-12 w-12 text-green-500 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Grupos no WhatsApp</h3>
+              <p className="text-foreground/60 text-sm">Mensagens importantes perdidas no meio de outras conversas</p>
+            </Card>
+            
+            <Card className="p-6 bg-gradient-to-br from-accent/30 to-accent/10 border-border/50">
+              <BookOpen className="h-12 w-12 text-blue-500 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Caderno de anotações</h3>
+              <p className="text-foreground/60 text-sm">Informações espalhadas em diferentes lugares</p>
+            </Card>
+          </div>
+          
+          <p className="text-2xl text-foreground font-medium italic font-serif">
+            "Se planejar está tomando o espaço do sonho, você precisa mudar de rota."
+          </p>
+        </div>
+      </section>
+
+      {/* Apresentação da Solução */}
+      <section id="funcionalidades" className="py-24 px-6 bg-gradient-to-br from-accent/30 to-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-6xl font-serif font-bold text-foreground mb-6">
-              Funcionalidades ✨ Inteligentes
+              Criamos um lugar só seu
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              Tudo que você precisa para planejar o casamento perfeito, em uma plataforma eficiente e organizada
+              Para sonhar, planejar, controlar e realizar
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="group p-8 bg-gradient-to-br from-white to-accent/20 border-border/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
                 <CardContent className="p-0 text-center space-y-6">
@@ -182,6 +221,129 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mood Boards Exclusivo */}
+      <section className="py-24 px-6 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+                Mood Boards que fazem sentido 📁
+              </h2>
+              <p className="text-xl text-foreground/70 mb-6">
+                Com o mood board da Central da Noiva, você salva suas inspirações e organiza por pastas personalizadas — e nunca mais perde o fio da sua ideia.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Pasta Lua de Mel</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Pasta Chá de Lingerie</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Pasta Decoração</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Pasta Vestidos</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-accent/50 to-accent/20 rounded-2xl p-8 h-80 flex items-center justify-center">
+              <div className="text-center">
+                <Image className="h-16 w-16 text-foreground/60 mx-auto mb-4" />
+                <p className="text-foreground/60">Visualização do Mood Board</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Central dos Convidados */}
+      <section className="py-24 px-6 bg-gradient-to-br from-accent/30 to-background">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-white rounded-2xl p-8 h-80 flex items-center justify-center shadow-lg">
+              <div className="text-center">
+                <Users className="h-16 w-16 text-foreground mx-auto mb-4" />
+                <p className="text-foreground/60">Central dos Convidados</p>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+                Central dos Convidados otimizada 👥
+              </h2>
+              <p className="text-xl text-foreground/70 mb-6">
+                O que antes era um site engessado, agora virou uma Central otimizada para os convidados.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Dress code e informações</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Local e horário</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Confirmação de presença</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Lista de presentes integrada</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <span className="text-foreground/70">Playlist e galeria pós-evento</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mockups do App */}
+      <section className="py-24 px-6 bg-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+            Visual leve, intuitivo e encantador
+          </h2>
+          <p className="text-xl text-foreground/70 mb-12">
+            Pra você organizar com tranquilidade e estilo
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="p-6 bg-gradient-to-br from-accent/20 to-accent/10 border-border/50 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-0 text-center">
+                <CheckSquare className="h-12 w-12 text-foreground mx-auto mb-4" />
+                <h3 className="font-semibold">Checklist</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-6 bg-gradient-to-br from-accent/20 to-accent/10 border-border/50 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-0 text-center">
+                <Users className="h-12 w-12 text-foreground mx-auto mb-4" />
+                <h3 className="font-semibold">Central dos Convidados</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-6 bg-gradient-to-br from-accent/20 to-accent/10 border-border/50 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-0 text-center">
+                <Image className="h-12 w-12 text-foreground mx-auto mb-4" />
+                <h3 className="font-semibold">Mood Board</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-6 bg-gradient-to-br from-accent/20 to-accent/10 border-border/50 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-0 text-center">
+                <DollarSign className="h-12 w-12 text-foreground mx-auto mb-4" />
+                <h3 className="font-semibold">Dashboard</h3>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -237,85 +399,30 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section id="depoimentos" className="py-24 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
-              Depoimentos 💕
-            </h2>
-            <p className="text-xl text-foreground/70">
-              O que nossas noivas falam sobre a experiência LovanaApp
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-8 bg-gradient-to-br from-white to-accent/20 border-border/50 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-0 space-y-6">
-                <div className="flex justify-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+      {/* Depoimento */}
+      <section className="py-24 px-6 bg-gradient-to-br from-accent/30 to-background">
+        <div className="container mx-auto max-w-4xl text-center">
+          <Card className="p-12 bg-white border-border/50 shadow-xl">
+            <CardContent className="p-0">
+              <div className="flex justify-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-2xl text-foreground font-medium italic mb-6 font-serif">
+                "Quando encontrei o app, percebi que eu não precisava mais dar conta de tudo sozinha. Cada detalhe ganhou espaço e eu finalmente pude respirar."
+              </blockquote>
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-accent to-background rounded-full flex items-center justify-center">
+                  <span className="text-foreground font-semibold">AC</span>
                 </div>
-                <blockquote className="text-foreground/80 italic text-center leading-relaxed">
-                  "Finalmente um app que entende o que uma noiva realmente precisa. Elegante e funcional!"
-                </blockquote>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-background rounded-full flex items-center justify-center">
-                    <span className="text-foreground font-semibold">MC</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="font-semibold text-foreground">Maria Clara</p>
-                    <p className="text-foreground/60 text-sm">São Paulo, SP</p>
-                  </div>
+                <div className="text-left">
+                  <p className="font-semibold text-foreground">Ana Clara</p>
+                  <p className="text-foreground/60">Noiva em MG</p>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="p-8 bg-gradient-to-br from-white to-accent/20 border-border/50 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-0 space-y-6">
-                <div className="flex justify-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-foreground/80 italic text-center leading-relaxed">
-                  "O design é lindo e a organização me salvou. Consegui ter controle total do meu casamento."
-                </blockquote>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-background rounded-full flex items-center justify-center">
-                    <span className="text-foreground font-semibold">AC</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="font-semibold text-foreground">Ana Clara</p>
-                    <p className="text-foreground/60 text-sm">Rio de Janeiro, RJ</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="p-8 bg-gradient-to-br from-white to-accent/20 border-border/50 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-0 space-y-6">
-                <div className="flex justify-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-foreground/80 italic text-center leading-relaxed">
-                  "Investimento que valeu cada centavo. Meu casamento saiu exatamente como sonhei."
-                </blockquote>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-background rounded-full flex items-center justify-center">
-                    <span className="text-foreground font-semibold">JS</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="font-semibold text-foreground">Júlia Santos</p>
-                    <p className="text-foreground/60 text-sm">Belo Horizonte, MG</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -383,7 +490,7 @@ const Index = () => {
             Organizar seu casamento não precisa ser confuso
           </h2>
           <p className="text-xl text-background/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Com o LovanaApp, você se sente no controle — com apoio, beleza e clareza
+            Com a Central da Noiva, você se sente no controle — com apoio, beleza e clareza
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/formulario-pos-pagamento">
