@@ -384,7 +384,9 @@ const Index = () => {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <CheckSquare className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground/80">{feature}</span>
+                        <span className={`text-foreground/80 ${feature.includes('bloqueado') ? 'line-through text-foreground/50' : ''}`}>
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
