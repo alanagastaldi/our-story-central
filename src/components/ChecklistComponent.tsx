@@ -373,15 +373,15 @@ const [items, setItems] = useState<ChecklistItem[]>([
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-white p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-sky-50 to-white p-6">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header Elegante */}
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-full flex items-center justify-center shadow-lg">
               <CheckCircle2 className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-foreground to-gray-800 bg-clip-text text-transparent">
               Checklist do Casamento
             </h1>
           </div>
@@ -393,7 +393,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
           <div className="flex flex-wrap gap-3">
             <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
               <DialogTrigger asChild>
-                <Button className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300">
                   <Plus className="w-4 h-4 mr-2" />
                   Adicionar Item
                 </Button>
@@ -488,7 +488,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
 
         {/* Progress Overview */}
         <Card className="bg-white/70 backdrop-blur-sm border-rose-200 shadow-xl">
-          <CardHeader className="bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-t-lg">
+          <CardHeader className="bg-gradient-to-r from-primary to-blue-500 text-white rounded-t-lg">
             <CardTitle className="flex items-center justify-between">
               <span className="flex items-center gap-2">
                 <Heart className="w-5 h-5" />
@@ -522,7 +522,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
               onClick={() => setSelectedCategory(category)}
               className={`transition-all duration-300 ${
                 selectedCategory === category 
-                  ? 'bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-lg scale-105' 
+                  ? 'bg-gradient-to-r from-primary to-blue-500 text-white shadow-lg scale-105' 
                   : 'border-rose-200 text-rose-600 hover:bg-rose-50 hover:border-rose-300'
               }`}
             >
@@ -665,14 +665,14 @@ const [items, setItems] = useState<ChecklistItem[]>([
 
         {filteredItems.length === 0 && (
           <div className="text-center py-16">
-            <div className="w-24 h-24 bg-gradient-to-br from-rose-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Calendar className="w-12 h-12 text-rose-400" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Nenhum item encontrado</h3>
             <p className="text-gray-600 mb-6">Tente ajustar os filtros ou adicione uma nova tarefa</p>
             <Button 
               onClick={() => setIsAddDialogOpen(true)}
-              className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600"
+              className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-600"
             >
               <Plus className="w-4 h-4 mr-2" />
               Adicionar Primeira Tarefa
