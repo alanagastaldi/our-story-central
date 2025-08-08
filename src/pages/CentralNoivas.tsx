@@ -20,6 +20,7 @@ import Moodboard from "@/components/Moodboard";
 import PainelFinanceiro from "@/components/PainelFinanceiro";
 import KanbanBoard from "@/components/KanbanBoard";
 import GiftList from "@/components/GiftList";
+import ConfiguracoesPage from "@/components/ConfiguracoesPage";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -150,6 +151,9 @@ const CentralNoivas = () => {
       
       case "financeiro":
         return <PainelFinanceiro />;
+      
+      case "configuracoes":
+        return <ConfiguracoesPage />;
       
       default:
         return (
