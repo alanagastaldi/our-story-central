@@ -216,7 +216,7 @@ const Index = () => {
                 Mood Boards que fazem sentido 📁
               </h2>
               <p className="text-xl text-gray-600 mb-6">
-                Com o mood board da LovanaApp, você salva suas inspirações e organiza por pastas personalizadas — e nunca mais perde o fio da sua ideia.
+                Com o mood board do LovanaApp, você salva suas inspirações e organiza por pastas personalizadas — e nunca mais perde o fio da sua ideia.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
@@ -443,7 +443,7 @@ const Index = () => {
             Organizar seu casamento não precisa ser confuso
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Com a LovanaApp, você se sente no controle — com apoio, beleza e clareza
+            Com o LovanaApp, você se sente no controle — com apoio, beleza e clareza
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/formulario-pos-pagamento">
