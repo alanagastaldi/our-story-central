@@ -352,7 +352,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'alta': return 'bg-rose-100 text-rose-800 border-rose-200';
+      case 'alta': return 'bg-gray-100 text-gray-800 border-gray-200';
       case 'media': return 'bg-amber-100 text-amber-800 border-amber-200';
       case 'baixa': return 'bg-emerald-100 text-emerald-800 border-emerald-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
@@ -400,7 +400,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle className="text-rose-600">Adicionar Nova Tarefa</DialogTitle>
+                  <DialogTitle className="text-foreground">Adicionar Nova Tarefa</DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
                   <Input
@@ -437,7 +437,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
                     <Button variant="outline" onClick={() => setIsAddDialogOpen(false)}>
                       Cancelar
                     </Button>
-                    <Button onClick={addNewItem} className="bg-rose-500 hover:bg-rose-600">
+                    <Button onClick={addNewItem} className="bg-foreground hover:bg-foreground/90 text-background">
                       Adicionar
                     </Button>
                   </div>
@@ -448,7 +448,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
             <Button 
               variant="outline" 
               onClick={generatePDF}
-              className="border-rose-200 text-rose-600 hover:bg-rose-50"
+              className="border-foreground/20 text-foreground hover:bg-foreground/5"
             >
               <Download className="w-4 h-4 mr-2" />
               Baixar PDF
@@ -461,7 +461,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
               variant={filterStatus === 'todas' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setFilterStatus('todas')}
-              className={filterStatus === 'todas' ? 'bg-rose-500 hover:bg-rose-600' : ''}
+              className={filterStatus === 'todas' ? 'bg-foreground hover:bg-foreground/90 text-background' : ''}
             >
               Todas
             </Button>
@@ -469,7 +469,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
               variant={filterStatus === 'pendentes' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setFilterStatus('pendentes')}
-              className={filterStatus === 'pendentes' ? 'bg-rose-500 hover:bg-rose-600' : ''}
+              className={filterStatus === 'pendentes' ? 'bg-foreground hover:bg-foreground/90 text-background' : ''}
             >
               <Clock className="w-3 h-3 mr-1" />
               Pendentes
@@ -478,7 +478,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
               variant={filterStatus === 'concluidas' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setFilterStatus('concluidas')}
-              className={filterStatus === 'concluidas' ? 'bg-rose-500 hover:bg-rose-600' : ''}
+              className={filterStatus === 'concluidas' ? 'bg-foreground hover:bg-foreground/90 text-background' : ''}
             >
               <CheckCircle2 className="w-3 h-3 mr-1" />
               Concluídas
@@ -487,7 +487,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
         </div>
 
         {/* Progress Overview */}
-        <Card className="bg-white/70 backdrop-blur-sm border-rose-200 shadow-xl">
+        <Card className="bg-white/70 backdrop-blur-sm border-foreground/20 shadow-xl">
           <CardHeader className="bg-gradient-to-r from-primary to-blue-500 text-white rounded-t-lg">
             <CardTitle className="flex items-center justify-between">
               <span className="flex items-center gap-2">
@@ -503,7 +503,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
             <div className="space-y-4">
               <Progress 
                 value={progressPercentage} 
-                className="h-4 bg-rose-100" 
+                className="h-4 bg-gray-100" 
               />
               <p className="text-gray-700 font-medium text-center">
                 🎉 {progressPercentage.toFixed(1)}% do seu sonho já está realizado!
@@ -523,7 +523,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
               className={`transition-all duration-300 ${
                 selectedCategory === category 
                   ? 'bg-gradient-to-r from-primary to-blue-500 text-white shadow-lg scale-105' 
-                  : 'border-rose-200 text-rose-600 hover:bg-rose-50 hover:border-rose-300'
+                  : 'border-foreground/20 text-foreground hover:bg-foreground/5 hover:border-foreground/30'
               }`}
             >
               {getCategoryIcon(category)}
@@ -540,7 +540,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
               className={`transition-all duration-500 hover-scale ${
                 item.completed 
                   ? 'bg-gradient-to-r from-emerald-50 to-green-50 border-emerald-200 opacity-80' 
-                  : 'bg-white/70 backdrop-blur-sm border-rose-100 hover:shadow-xl hover:border-rose-200'
+                  : 'bg-white/70 backdrop-blur-sm border-foreground/20 hover:shadow-xl hover:border-foreground/30'
               }`}
             >
               <CardContent className="p-6">
@@ -563,7 +563,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
                     </h3>
                     
                     <div className="flex flex-wrap items-center gap-2 mt-3">
-                      <Badge variant="outline" className="bg-rose-50 border-rose-200 text-rose-700">
+                      <Badge variant="outline" className="bg-gray-50 border-gray-200 text-gray-700">
                         {getCategoryIcon(item.category)}
                         <span className="ml-1">{item.category}</span>
                       </Badge>
@@ -588,14 +588,14 @@ const [items, setItems] = useState<ChecklistItem[]>([
                           variant="ghost"
                           size="sm"
                           onClick={() => setEditingItem(item)}
-                          className="text-gray-500 hover:text-rose-600 hover:bg-rose-50"
+                          className="text-gray-500 hover:text-foreground hover:bg-foreground/5"
                         >
                           <Edit3 className="w-4 h-4" />
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="sm:max-w-md">
                         <DialogHeader>
-                          <DialogTitle className="text-rose-600">Editar Tarefa</DialogTitle>
+                          <DialogTitle className="text-foreground">Editar Tarefa</DialogTitle>
                         </DialogHeader>
                         {editingItem && (
                           <div className="space-y-4">
@@ -639,7 +639,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
                               <Button variant="outline" onClick={() => setEditingItem(null)}>
                                 Cancelar
                               </Button>
-                              <Button onClick={updateItem} className="bg-rose-500 hover:bg-rose-600">
+                              <Button onClick={updateItem} className="bg-foreground hover:bg-foreground/90 text-background">
                                 Salvar
                               </Button>
                             </div>
@@ -666,7 +666,7 @@ const [items, setItems] = useState<ChecklistItem[]>([
         {filteredItems.length === 0 && (
           <div className="text-center py-16">
             <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Calendar className="w-12 h-12 text-rose-400" />
+              <Calendar className="w-12 h-12 text-gray-400" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Nenhum item encontrado</h3>
             <p className="text-gray-600 mb-6">Tente ajustar os filtros ou adicione uma nova tarefa</p>
