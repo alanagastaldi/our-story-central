@@ -43,43 +43,46 @@ const Index = () => {
 
   const plans = [
     {
-      name: "Mensal",
-      price: "R$ 47",
-      period: "/mês",
+      name: "Essencial",
+      price: "R$ 14,90",
+      period: "pagamento único",
       features: [
-        "Checklist completo e personalizável",
-        "Lista de presentes elegante",
-        "Site do casamento responsivo",
-        "Suporte por email",
-        "Acesso por 30 dias"
+        "✅ Checklist completo de casamento",
+        "✅ Lista de Enxoval (editável e exportável)",
+        "❌ Tarefas (Estilo Trello) - bloqueado",
+        "❌ Lista de Presentes - bloqueado",
+        "❌ Editor de Design - bloqueado",
+        "❌ Painel Financeiro - bloqueado"
       ],
       popular: false
     },
     {
-      name: "Premium Mensal",
-      price: "R$ 97",
+      name: "Mensal",
+      price: "R$ 29,90",
       period: "/mês", 
       features: [
-        "Tudo do plano Mensal",
-        "Mood board ilimitado",
-        "Dashboard financeiro",
-        "Templates premium",
-        "Suporte prioritário",
-        "Backup automático"
+        "✅ Checklist completo (pré-pronto e editável)",
+        "✅ Lista de Enxoval (categorias e PDF)",
+        "✅ Tarefas (Estilo Trello) - completo",
+        "✅ Lista de Presentes - acesso completo",
+        "✅ Editor de Design dos Convidados",
+        "✅ Painel Financeiro com gráficos",
+        "✅ Área de Moodboard",
+        "✅ Gestão de Convidados"
       ],
       popular: true
     },
     {
-      name: "Vitalício",
-      price: "R$ 497",
+      name: "Vitalício Premium",
+      price: "R$ 319",
       period: "pagamento único",
       features: [
-        "Acesso vitalício completo",
-        "Todas as funcionalidades premium",
-        "Atualizações futuras incluídas",
-        "Consultoria personalizada",
-        "Templates exclusivos",
-        "Suporte VIP"
+        "✅ Tudo do plano mensal, sem limitações",
+        "✅ Central dos Convidados customizável",
+        "✅ Design único e compartilhável",
+        "✅ Gestão completa de Convidados",
+        "✅ Confirmação de presença em tempo real",
+        "✅ Acesso vitalício a todas as funcionalidades"
       ],
       popular: false
     }
