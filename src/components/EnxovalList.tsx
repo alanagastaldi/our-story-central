@@ -22,9 +22,9 @@ import {
   Wrench,
   Sparkles,
   Heart,
-  Package,
-  LucideIcon
+  Package
 } from "lucide-react";
+import type { LucideIcon } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import {
   Dialog,
