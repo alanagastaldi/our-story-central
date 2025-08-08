@@ -21,6 +21,7 @@ import PainelFinanceiro from "@/components/PainelFinanceiro";
 import KanbanBoard from "@/components/KanbanBoard";
 import GiftList from "@/components/GiftList";
 import ConfiguracoesPage from "@/components/ConfiguracoesPage";
+import EnxovalList from "@/components/EnxovalList";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -145,6 +146,9 @@ const CentralNoivas = () => {
       
       case "presentes":
         return <GiftList />;
+      
+      case "enxoval":
+        return <EnxovalList />;
       
       case "moodboard":
         return <Moodboard />;
