@@ -104,7 +104,7 @@ const CentralNoivas = () => {
         return (
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Central da Noiva</h1>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">LovanaApp</h1>
               <p className="text-gray-600">Organize todos os detalhes do seu casamento em um só lugar</p>
             </div>
             
@@ -186,7 +186,7 @@ const CentralNoivas = () => {
       )}>
         <div className="p-6 border-b">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold text-pink-600">Central da Noiva</h1>
+            <h1 className="text-xl font-bold text-pink-600">LovanaApp</h1>
             <Button 
               variant="ghost" 
               size="sm" 

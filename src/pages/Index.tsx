@@ -112,7 +112,7 @@ const Index = () => {
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm border-b border-pink-100 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-pink-600">Central da Noiva</div>
+          <div className="text-2xl font-bold text-pink-600">LovanaApp</div>
           <div className="hidden md:flex space-x-6">
             <a href="#funcionalidades" className="text-gray-700 hover:text-pink-600 transition-colors">Funcionalidades</a>
             <a href="#planos" className="text-gray-700 hover:text-pink-600 transition-colors">Planos</a>
@@ -216,7 +216,7 @@ const Index = () => {
                 Mood Boards que fazem sentido 📁
               </h2>
               <p className="text-xl text-gray-600 mb-6">
-                Com o mood board da Central da Noiva, você salva suas inspirações e organiza por pastas personalizadas — e nunca mais perde o fio da sua ideia.
+                Com o mood board da LovanaApp, você salva suas inspirações e organiza por pastas personalizadas — e nunca mais perde o fio da sua ideia.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
@@ -443,7 +443,7 @@ const Index = () => {
             Organizar seu casamento não precisa ser confuso
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Com a Central da Noiva, você se sente no controle — com apoio, beleza e clareza
+            Com a LovanaApp, você se sente no controle — com apoio, beleza e clareza
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/formulario-pos-pagamento">
@@ -461,7 +461,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="text-2xl font-bold text-pink-400 mb-4">Central da Noiva</div>
+          <div className="text-2xl font-bold text-pink-400 mb-4">LovanaApp</div>
           <p className="text-gray-400 mb-6">
             Transformando o planejamento de casamentos em uma experiência encantadora
           </p>
