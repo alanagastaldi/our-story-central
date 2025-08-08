@@ -65,7 +65,7 @@ const Index = () => {
         "Lista de Enxoval (categorias e PDF)",
         "Tarefas (Estilo Trello) - completo",
         "Lista de Presentes - acesso completo",
-        "Editor de Design dos Convidados",
+        "Editor de Design dos Convidados - bloqueado",
         "Painel Financeiro com gráficos",
         "Área de Moodboard",
         "Gestão de Convidados"
