@@ -69,7 +69,7 @@ const TaskCard = ({ task, isOverlay = false, onEdit, onDelete }: TaskCardProps) 
       className={cn(
         'bg-white border shadow-sm hover:shadow-md transition-shadow cursor-grab active:cursor-grabbing',
         isDragging && 'opacity-50',
-        isOverdue && 'border-red-300',
+        isOverdue && 'border-blue-300',
         isDueSoon && !isOverdue && 'border-yellow-300'
       )}
     >
@@ -95,9 +95,9 @@ const TaskCard = ({ task, isOverlay = false, onEdit, onDelete }: TaskCardProps) 
                 e.stopPropagation();
                 onDelete?.();
               }}
-              className="h-6 w-6 p-0 hover:bg-red-100"
+              className="h-6 w-6 p-0 hover:bg-blue-100"
             >
-              <Trash2 className="h-3 w-3 text-red-600" />
+              <Trash2 className="h-3 w-3 text-blue-600" />
             </Button>
           </div>
         </div>
@@ -114,7 +114,7 @@ const TaskCard = ({ task, isOverlay = false, onEdit, onDelete }: TaskCardProps) 
               variant="outline" 
               className={cn(
                 "text-xs px-2 py-0.5",
-                isOverdue && "border-red-300 text-red-700 bg-red-50",
+                isOverdue && "border-blue-300 text-blue-700 bg-blue-50",
                 isDueSoon && !isOverdue && "border-yellow-300 text-yellow-700 bg-yellow-50"
               )}
             >
