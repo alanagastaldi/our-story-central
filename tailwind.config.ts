@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'serif': ['Playfair Display', 'serif'],
+				'sans': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,11 +56,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Wedding theme colors
+				// Luxury Wedding theme colors
 				wedding: {
-					pink: 'hsl(var(--wedding-pink))',
-					'pink-light': 'hsl(var(--wedding-pink-light))',
-					'pink-soft': 'hsl(var(--wedding-pink-soft))',
+					blue: 'hsl(var(--wedding-blue))',
+					'blue-light': 'hsl(var(--wedding-blue-light))',
+					'blue-soft': 'hsl(var(--wedding-blue-soft))',
 					dark: 'hsl(var(--wedding-dark))',
 					primary: 'hsl(var(--wedding-primary))'
 				},

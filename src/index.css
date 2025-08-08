@@ -8,47 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Wedding Theme Colors - Rosa claro + Preto */
-    --background: 350 20% 97%;
-    --foreground: 0 0% 8%;
+    /* Luxury Wedding Theme Colors - Baby blue + Dark gray */
+    --background: 215 100% 96%; /* Baby blue #D6EAF8 */
+    --foreground: 0 0% 29%; /* Dark gray #4A4A4A */
 
-    --card: 350 25% 98%;
-    --card-foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 29%;
 
-    --popover: 350 25% 98%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 29%;
 
-    --primary: 0 0% 8%;
-    --primary-foreground: 350 25% 98%;
+    --primary: 0 0% 13%; /* Rich black */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 350 30% 92%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 215 100% 96%; /* Baby blue */
+    --secondary-foreground: 0 0% 13%;
 
-    --muted: 350 20% 94%;
+    --muted: 215 50% 93%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 350 45% 88%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 215 100% 92%;
+    --accent-foreground: 0 0% 13%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 350 25% 98%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 350 25% 90%;
-    --input: 350 25% 94%;
-    --ring: 0 0% 8%;
+    --border: 215 30% 85%;
+    --input: 215 30% 85%;
+    --ring: 0 0% 13%;
 
-    /* Wedding specific colors */
-    --wedding-pink: 350 45% 88%;
-    --wedding-pink-light: 350 30% 92%;
-    --wedding-pink-soft: 350 20% 94%;
-    --wedding-dark: 0 0% 8%;
-    --wedding-primary: 350 60% 65%;
+    /* Luxury Wedding Colors */
+    --wedding-blue: 215 100% 96%;
+    --wedding-blue-light: 215 80% 98%;
+    --wedding-blue-soft: 215 50% 95%;
+    --wedding-dark: 0 0% 13%;
+    --wedding-primary: 215 100% 85%;
     
-    /* Shadows and effects */
-    --shadow-elegant: 0 4px 20px -2px hsl(350 30% 80% / 0.25);
-    --shadow-story: 0 2px 12px -2px hsl(350 30% 80% / 0.3);
-    --gradient-story: linear-gradient(135deg, hsl(350 45% 88%), hsl(350 30% 92%));
-    --gradient-hero: linear-gradient(180deg, hsl(350 20% 97%), hsl(350 25% 95%));
+    /* Luxury shadows and effects */
+    --shadow-elegant: 0 8px 32px -8px hsl(215 30% 70% / 0.3);
+    --shadow-story: 0 4px 20px -4px hsl(215 30% 75% / 0.25);
+    --gradient-story: linear-gradient(135deg, hsl(215 100% 96%), hsl(215 80% 98%));
+    --gradient-hero: linear-gradient(180deg, hsl(215 100% 96%), hsl(0 0% 100%));
 
     --radius: 0.5rem;
 
