@@ -431,28 +431,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-foreground to-foreground/90 text-background">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl lg:text-6xl font-serif font-bold mb-8">
-            Pronta para um planejamento de casamento de <span className="italic">luxo</span>?
-          </h2>
-          <p className="text-xl text-background/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Junte-se às noivas que escolheram a excelência e transformaram o stress em elegância
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link to="/formulario-pos-pagamento">
-              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-10 py-4 rounded-lg transition-all duration-300 hover:shadow-xl">
-                Começar Agora
-              </Button>
-            </Link>
-            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-background/30 text-background hover:bg-background hover:text-foreground transition-all duration-300">
-              Falar com Consultora
-            </Button>
-          </div>
-        </div>
-      </section>
-
 
 
 
