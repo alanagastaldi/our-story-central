@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -524,7 +524,7 @@ const EnxovalList = () => {
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <div className="flex items-center justify-between w-full">
                     <div className="flex items-center space-x-3">
-                      <category.icon className="h-6 w-6 text-primary" />
+                      {React.createElement(category.icon, { className: "h-6 w-6 text-primary" })}
                       <div className="text-left">
                         <h3 className="font-semibold">{category.name}</h3>
                         <p className="text-sm text-muted-foreground">
