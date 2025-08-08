@@ -47,7 +47,7 @@ const CentralNoivas = () => {
       title: "Tarefas Pendentes",
       description: "Organize seu planejamento com sistema visual",
       icon: CheckSquare,
-      color: "bg-pink-50 border-pink-200",
+      color: "bg-gradient-to-br from-accent/30 to-accent/10 border-border/50",
       premium: false,
       onClick: () => setActiveSection("tarefas")
     },
@@ -55,7 +55,7 @@ const CentralNoivas = () => {
       title: "Checklist do Casamento",
       description: "Lista completa de tarefas por prazo",
       icon: ClipboardList,
-      color: "bg-indigo-50 border-indigo-200",
+      color: "bg-gradient-to-br from-accent/30 to-accent/10 border-border/50",
       premium: false,
       onClick: () => setActiveSection("checklist")
     },
@@ -63,7 +63,7 @@ const CentralNoivas = () => {
       title: "Lista de Presentes",
       description: "Gerencie presentes e links externos",
       icon: Gift,
-      color: "bg-purple-50 border-purple-200",
+      color: "bg-gradient-to-br from-accent/30 to-accent/10 border-border/50",
       premium: false,
       onClick: () => setActiveSection("presentes")
     },
@@ -71,7 +71,7 @@ const CentralNoivas = () => {
       title: "Lista de Enxoval",
       description: "Controle itens por categoria",
       icon: ShoppingBasket,
-      color: "bg-blue-50 border-blue-200",
+      color: "bg-gradient-to-br from-accent/30 to-accent/10 border-border/50",
       premium: false,
       onClick: () => setActiveSection("enxoval")
     },
@@ -79,7 +79,7 @@ const CentralNoivas = () => {
       title: "Editor de Design",
       description: "Personalize a central dos convidados",
       icon: Palette,
-      color: "bg-yellow-50 border-yellow-200",
+      color: "bg-gradient-to-br from-accent/20 to-accent/5 border-border/50",
       premium: true,
       onClick: () => setActiveSection("design")
     },
@@ -87,7 +87,7 @@ const CentralNoivas = () => {
       title: "Painel Financeiro",
       description: "Controle gastos e orçamento",
       icon: DollarSign,
-      color: "bg-green-50 border-green-200",
+      color: "bg-gradient-to-br from-accent/20 to-accent/5 border-border/50",
       premium: true,
       onClick: () => setActiveSection("financeiro")
     },
@@ -95,7 +95,7 @@ const CentralNoivas = () => {
       title: "Moodboard",
       description: "Grade de inspiração e referências",
       icon: Image,
-      color: "bg-indigo-50 border-indigo-200",
+      color: "bg-gradient-to-br from-accent/30 to-accent/10 border-border/50",
       premium: false,
       onClick: () => setActiveSection("moodboard")
     },
@@ -103,7 +103,7 @@ const CentralNoivas = () => {
       title: "Gestão de Convidados",
       description: "Acompanhe confirmações de presença",
       icon: Users,
-      color: "bg-teal-50 border-teal-200",
+      color: "bg-gradient-to-br from-accent/30 to-accent/10 border-border/50",
       premium: false,
       onClick: () => setActiveSection("convidados")
     }
@@ -115,8 +115,8 @@ const CentralNoivas = () => {
         return (
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Central das Noivas</h1>
-              <p className="text-gray-600">Organize todos os detalhes do seu casamento em um só lugar</p>
+              <h1 className="text-3xl font-serif font-bold text-black mb-2">Central das Noivas</h1>
+              <p className="text-foreground/70">Organize todos os detalhes do seu casamento em um só lugar</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -131,20 +131,20 @@ const CentralNoivas = () => {
                 >
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <div className="flex items-center space-x-2">
-                      <card.icon className="h-6 w-6 text-gray-700" />
+                      <card.icon className="h-6 w-6 text-foreground" />
                       {card.premium && (
                         <Lock className="h-4 w-4 text-amber-600" />
                       )}
                     </div>
                     {card.premium && (
-                      <Badge variant="secondary" className="bg-amber-100 text-amber-800">
+                      <Badge variant="secondary" className="bg-amber-100 text-amber-800 border border-amber-200">
                         Premium
                       </Badge>
                     )}
                   </CardHeader>
                   <CardContent>
-                    <CardTitle className="text-lg mb-2">{card.title}</CardTitle>
-                    <p className="text-sm text-gray-600">{card.description}</p>
+                    <CardTitle className="text-lg mb-2 font-serif text-black">{card.title}</CardTitle>
+                    <p className="text-sm text-foreground/70">{card.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -176,15 +176,15 @@ const CentralNoivas = () => {
       default:
         return (
           <div className="text-center py-12">
-            <h2 className="text-xl font-semibold mb-2">Em desenvolvimento</h2>
-            <p className="text-gray-600">Esta seção estará disponível em breve!</p>
+            <h2 className="text-xl font-serif font-semibold mb-2 text-black">Em desenvolvimento</h2>
+            <p className="text-foreground/70">Esta seção estará disponível em breve!</p>
           </div>
         );
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <div 
@@ -195,12 +195,12 @@ const CentralNoivas = () => {
 
       {/* Sidebar */}
       <div className={cn(
-        "fixed left-0 top-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50",
+        "fixed left-0 top-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50 border-r border-border",
         sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}>
-        <div className="p-6 border-b">
+        <div className="p-6 border-b border-border">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold text-pink-600">LovanaApp</h1>
+            <h1 className="text-xl font-serif font-bold text-black">LovanaApp</h1>
             <Button 
               variant="ghost" 
               size="sm" 
@@ -210,7 +210,7 @@ const CentralNoivas = () => {
               <X className="h-4 w-4" />
             </Button>
           </div>
-          <p className="text-sm text-gray-600 mt-1">Ana & João</p>
+          <p className="text-sm text-foreground/70 mt-1">Ana & João</p>
         </div>
         
         <nav className="p-4 space-y-2">
@@ -219,8 +219,8 @@ const CentralNoivas = () => {
               key={section.id}
               variant={activeSection === section.id ? "default" : "ghost"}
               className={cn(
-                "w-full justify-start",
-                activeSection === section.id && "bg-pink-600 hover:bg-pink-700"
+                "w-full justify-start hover:bg-accent/50 transition-all duration-200",
+                activeSection === section.id && "bg-foreground text-background hover:bg-foreground/90"
               )}
               onClick={() => {
                 setActiveSection(section.id);
@@ -240,7 +240,7 @@ const CentralNoivas = () => {
       {/* Main Content */}
       <div className="md:ml-64">
         {/* Header */}
-        <header className="bg-white shadow-sm border-b">
+        <header className="bg-white shadow-sm border-b border-border">
           <div className="px-6 py-4 flex items-center justify-between">
             <Button 
               variant="ghost" 
@@ -251,11 +251,11 @@ const CentralNoivas = () => {
               <Menu className="h-5 w-5" />
             </Button>
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="border-foreground/20 text-foreground hover:bg-foreground hover:text-background">
                 Ver Central dos Convidados
               </Button>
-              <div className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center">
-                <span className="text-white text-sm font-medium">A</span>
+              <div className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center">
+                <span className="text-background text-sm font-medium">A</span>
               </div>
             </div>
           </div>
