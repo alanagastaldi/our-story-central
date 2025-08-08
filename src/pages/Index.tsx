@@ -116,7 +116,7 @@ const Index = () => {
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-md border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-6 py-5 flex justify-between items-center">
-          <div className="text-3xl font-serif font-bold text-foreground">LovanaApp</div>
+          <div className="text-3xl font-serif font-bold text-black">LovanaApp</div>
           <div className="hidden md:flex space-x-8">
             <a href="#funcionalidades" className="text-foreground/80 hover:text-foreground transition-all duration-300 font-medium">Funcionalidades</a>
             <a href="#planos" className="text-foreground/80 hover:text-foreground transition-all duration-300 font-medium">Planos</a>
@@ -135,8 +135,8 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h1 className="text-5xl lg:text-7xl font-serif font-bold text-foreground leading-tight">
-                Transforme o <span className="italic text-foreground/80">caos do casamento</span> em leveza e clareza
+              <h1 className="text-5xl lg:text-7xl font-serif font-bold text-black leading-tight">
+                Transforme o <span className="italic text-black/80">caos do casamento</span> em leveza e clareza
               </h1>
               <p className="text-xl text-foreground/70 leading-relaxed max-w-lg">
                 Um app criado para noivas que querem se organizar sem perder a magia do momento
@@ -170,7 +170,7 @@ const Index = () => {
       {/* Dor da Noiva Moderna */}
       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-8">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-8">
             Cansada de se organizar em mil lugares diferentes?
           </h2>
           
@@ -204,7 +204,7 @@ const Index = () => {
       <section id="funcionalidades" className="py-24 px-6 bg-gradient-to-br from-accent/30 to-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-foreground mb-6">
+            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-black mb-6">
               Criamos um lugar só seu
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
@@ -233,7 +233,7 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-6">
                 Mood Boards que fazem sentido 📁
               </h2>
               <p className="text-xl text-foreground/70 mb-6">
@@ -279,7 +279,7 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-6">
                 Central dos Convidados otimizada 👥
               </h2>
               <p className="text-xl text-foreground/70 mb-6">
@@ -315,7 +315,7 @@ const Index = () => {
       {/* Mockups do App */}
       <section className="py-24 px-6 bg-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-6">
             Visual leve, intuitivo e encantador
           </h2>
           <p className="text-xl text-foreground/70 mb-12">
@@ -355,7 +355,7 @@ const Index = () => {
       <section id="planos" className="py-24 px-6 bg-gradient-to-br from-accent/30 to-background">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-foreground mb-6">
+            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-black mb-6">
               Planos de Investimento
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
@@ -492,7 +492,7 @@ const Index = () => {
       <footer className="py-16 px-6 bg-background text-foreground">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
-            <div className="text-3xl font-serif font-bold mb-6">LovanaApp</div>
+            <div className="text-3xl font-serif font-bold text-black mb-6">LovanaApp</div>
             <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
               A plataforma de planejamento de casamento mais inteligente e organizada do Brasil
             </p>
