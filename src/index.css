@@ -67,6 +67,12 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Design Editor Colors - Baby Blue Theme */
+    --editor-primary: 210 50% 90%; /* #D6EAF8 - Azul bebê */
+    --editor-secondary: 0 0% 29%; /* #4A4A4A - Cinza chumbo */
+    --editor-accent: 210 50% 95%; /* Azul bebê claro */
+    --editor-border: 210 20% 85%;
   }
 
   .dark {

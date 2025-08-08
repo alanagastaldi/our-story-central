@@ -24,6 +24,7 @@ import GiftList from "@/components/GiftList";
 import ConfiguracoesPage from "@/components/ConfiguracoesPage";
 import EnxovalList from "@/components/EnxovalList";
 import ChecklistComponent from "@/components/ChecklistComponent";
+import DesignEditor from "@/components/DesignEditor";
 
 const CentralNoivas = () => {
   const [activeSection, setActiveSection] = useState<string>("dashboard");
@@ -169,6 +170,9 @@ const CentralNoivas = () => {
       
       case "financeiro":
         return <PainelFinanceiro />;
+      
+      case "design":
+        return <DesignEditor />;
       
       case "configuracoes":
         return <ConfiguracoesPage />;
