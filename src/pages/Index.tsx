@@ -47,12 +47,12 @@ const Index = () => {
       price: "R$ 14,90",
       period: "pagamento único",
       features: [
-        "✅ Checklist completo de casamento",
-        "✅ Lista de Enxoval (editável e exportável)",
-        "❌ Tarefas (Estilo Trello) - bloqueado",
-        "❌ Lista de Presentes - bloqueado",
-        "❌ Editor de Design - bloqueado",
-        "❌ Painel Financeiro - bloqueado"
+        "Checklist completo de casamento",
+        "Lista de Enxoval (editável e exportável)",
+        "Tarefas (Estilo Trello) - bloqueado",
+        "Lista de Presentes - bloqueado",
+        "Editor de Design - bloqueado",
+        "Painel Financeiro - bloqueado"
       ],
       popular: false
     },
@@ -61,14 +61,14 @@ const Index = () => {
       price: "R$ 29,90",
       period: "/mês", 
       features: [
-        "✅ Checklist completo (pré-pronto e editável)",
-        "✅ Lista de Enxoval (categorias e PDF)",
-        "✅ Tarefas (Estilo Trello) - completo",
-        "✅ Lista de Presentes - acesso completo",
-        "✅ Editor de Design dos Convidados",
-        "✅ Painel Financeiro com gráficos",
-        "✅ Área de Moodboard",
-        "✅ Gestão de Convidados"
+        "Checklist completo (pré-pronto e editável)",
+        "Lista de Enxoval (categorias e PDF)",
+        "Tarefas (Estilo Trello) - completo",
+        "Lista de Presentes - acesso completo",
+        "Editor de Design dos Convidados",
+        "Painel Financeiro com gráficos",
+        "Área de Moodboard",
+        "Gestão de Convidados"
       ],
       popular: true
     },
@@ -77,12 +77,12 @@ const Index = () => {
       price: "R$ 319",
       period: "pagamento único",
       features: [
-        "✅ Tudo do plano mensal, sem limitações",
-        "✅ Central dos Convidados customizável",
-        "✅ Design único e compartilhável",
-        "✅ Gestão completa de Convidados",
-        "✅ Confirmação de presença em tempo real",
-        "✅ Acesso vitalício a todas as funcionalidades"
+        "Tudo do plano mensal, sem limitações",
+        "Central dos Convidados customizável",
+        "Design único e compartilhável",
+        "Gestão completa de Convidados",
+        "Confirmação de presença em tempo real",
+        "Acesso vitalício a todas as funcionalidades"
       ],
       popular: false
     }
