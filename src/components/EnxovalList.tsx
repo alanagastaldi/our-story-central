@@ -22,7 +22,8 @@ import {
   Wrench,
   Sparkles,
   Heart,
-  Package
+  Package,
+  LucideIcon
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -52,7 +53,7 @@ interface EnxovalItem {
 interface Category {
   id: string;
   name: string;
-  icon: any;
+  icon: LucideIcon;
   color: string;
   items: EnxovalItem[];
 }
@@ -524,7 +525,7 @@ const EnxovalList = () => {
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <div className="flex items-center justify-between w-full">
                     <div className="flex items-center space-x-3">
-                      {React.createElement(category.icon, { className: "h-6 w-6 text-primary" })}
+                      <category.icon className="h-6 w-6 text-primary" />
                       <div className="text-left">
                         <h3 className="font-semibold">{category.name}</h3>
                         <p className="text-sm text-muted-foreground">
