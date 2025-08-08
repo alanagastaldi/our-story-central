@@ -127,7 +127,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <h1 className="text-5xl lg:text-7xl font-serif font-bold text-foreground leading-tight">
-                O casamento dos seus <span className="italic text-foreground/80">sonhos</span> merece planejamento eficiente
+                O casamento dos seus <span className="italic text-foreground/80">sonhos</span> merece um planejamento eficiente
               </h1>
               <p className="text-xl text-foreground/70 leading-relaxed max-w-lg">
                 Uma plataforma inteligente e organizada para noivas que valorizam eficiência em cada detalhe
