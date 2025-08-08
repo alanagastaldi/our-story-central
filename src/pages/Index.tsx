@@ -32,7 +32,7 @@ const Index = () => {
   const features = [
     { icon: CheckSquare, title: "💍 Checklist Completo", description: "Organize todas as etapas do seu casamento com elegância" },
     { icon: Gift, title: "🎁 Lista de Presentes", description: "Compartilhe seus sonhos de forma sofisticada" },
-    { icon: Users, title: "✨ Site do Casamento", description: "Uma experiência única para seus convidados" }
+    { icon: Users, title: "✨ Central dos Convidados", description: "Uma experiência única para seus convidados" }
   ];
 
   const plans = [
