@@ -23,6 +23,23 @@ import DesignPreview from './DesignPreview';
 import ColorPalette from './ColorPalette';
 import FontSelector from './FontSelector';
 import LayoutControls from './LayoutControls';
+import ContentEditor from './ContentEditor';
+
+interface StoryContent {
+  id: string;
+  icon: string;
+  label: string;
+  title: string;
+  description: string;
+  details: {
+    [key: string]: string;
+  };
+  buttons: Array<{
+    label: string;
+    url: string;
+    style: 'primary' | 'outline';
+  }>;
+}
 
 interface DesignConfig {
   backgroundColor: string;
@@ -34,6 +51,18 @@ interface DesignConfig {
     weddingDate: string;
     venue: string;
     description: string;
+    welcomeMessage: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    footerText: string;
+    tabLabels: {
+      info: string;
+      gallery: string;
+      messages: string;
+    };
+    stories: StoryContent[];
   };
   layout: {
     headerStyle: 'classic' | 'modern' | 'rustic';
@@ -56,7 +85,120 @@ const defaultConfig: DesignConfig = {
     coupleNames: 'Ana & Carlos 💕',
     weddingDate: '15 de Junho, 2024',
     venue: 'Fazenda Vista Alegre',
-    description: 'Bem-vindos à Central dos Convidados!'
+    description: 'Bem-vindos à Central dos Convidados!',
+    welcomeMessage: {
+      title: 'Bem-vindos ao nosso grande dia!',
+      subtitle: '💕',
+      description: 'Toque nos círculos acima para ver todas as informações importantes sobre o nosso casamento'
+    },
+    footerText: 'Obrigada por fazer parte do nosso grande dia! 🙏',
+    tabLabels: {
+      info: '📱 Informações',
+      gallery: '📸 Galeria',
+      messages: '💌 Mensagens'
+    },
+    stories: [
+      {
+        id: 'horario',
+        icon: '⏰',
+        label: 'Horário',
+        title: 'Horário da Cerimônia',
+        description: '',
+        details: {
+          'data': '📅 Data: 15 de Junho, 2024',
+          'cerimonia': '⏰ Cerimônia: 16h00',
+          'festa': '🎉 Festa: 18h00',
+          'termino': '🌅 Término: 02h00'
+        },
+        buttons: []
+      },
+      {
+        id: 'local',
+        icon: '📍',
+        label: 'Local',
+        title: 'Local do Evento',
+        description: '',
+        details: {
+          'nome': 'Fazenda Vista Alegre',
+          'endereco': 'Rua das Flores, 123 - Campo Belo, SP'
+        },
+        buttons: [
+          {
+            label: 'Ver Rota no Google Maps',
+            url: 'https://maps.google.com',
+            style: 'primary'
+          }
+        ]
+      },
+      {
+        id: 'presentes',
+        icon: '🎁',
+        label: 'Presentes',
+        title: 'Lista de Presentes',
+        description: 'Sua presença já é o maior presente! Mas se quiser nos presentear:',
+        details: {},
+        buttons: [
+          {
+            label: 'Lista Casas Bahia',
+            url: '#',
+            style: 'outline'
+          },
+          {
+            label: 'PIX: casamento@email.com',
+            url: '#',
+            style: 'outline'
+          }
+        ]
+      },
+      {
+        id: 'confirmacao',
+        icon: '📬',
+        label: 'RSVP',
+        title: 'Confirmação de Presença',
+        description: '',
+        details: {},
+        buttons: [
+          {
+            label: '✅ Vou sim!',
+            url: '#',
+            style: 'primary'
+          },
+          {
+            label: '❌ Não posso ir',
+            url: '#',
+            style: 'outline'
+          }
+        ]
+      },
+      {
+        id: 'playlist',
+        icon: '🎵',
+        label: 'Playlist',
+        title: 'Playlist do Casamento',
+        description: 'Contribua com suas músicas favoritas para nossa festa!',
+        details: {},
+        buttons: [
+          {
+            label: 'Abrir Playlist no Spotify',
+            url: 'https://spotify.com',
+            style: 'primary'
+          }
+        ]
+      },
+      {
+        id: 'dresscode',
+        icon: '👗',
+        label: 'Dress Code',
+        title: 'Dress Code',
+        description: '',
+        details: {
+          'traje': 'Traje Social - Elegante e sofisticado',
+          'evitar': '🚫 Evitar: Branco, off-white e tons muito claros',
+          'sugestao': '✨ Sugestão: Tons pastéis, navy, burgundy'
+        },
+        buttons: []
+      }
+    ]
   },
   layout: {
     headerStyle: 'classic',
@@ -212,7 +354,7 @@ const DesignEditor = () => {
 
       <div className="flex-1 flex">
         {/* Painel lateral esquerdo - Controles visuais */}
-        <div className="w-80 border-r border-border bg-white overflow-y-auto">
+        <div className="w-80 border-r border-border bg-white overflow-y-auto scrollbar-hide">
           <div className="p-4">
             <div className="flex mb-4">
               <Button
@@ -334,56 +476,24 @@ const DesignEditor = () => {
             )}
 
             {activePanel === 'content' && (
-              <div className="space-y-4">
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm">Textos Principais</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <Label className="text-xs">Nomes dos Noivos</Label>
-                      <Input
-                        value={config.content.coupleNames}
-                        onChange={(e) => updateConfig({
-                          content: { ...config.content, coupleNames: e.target.value }
-                        })}
-                        placeholder="Ana & Carlos 💕"
-                      />
-                    </div>
-                    <div>
-                      <Label className="text-xs">Data do Casamento</Label>
-                      <Input
-                        value={config.content.weddingDate}
-                        onChange={(e) => updateConfig({
-                          content: { ...config.content, weddingDate: e.target.value }
-                        })}
-                        placeholder="15 de Junho, 2024"
-                      />
-                    </div>
-                    <div>
-                      <Label className="text-xs">Local</Label>
-                      <Input
-                        value={config.content.venue}
-                        onChange={(e) => updateConfig({
-                          content: { ...config.content, venue: e.target.value }
-                        })}
-                        placeholder="Fazenda Vista Alegre"
-                      />
-                    </div>
-                    <div>
-                      <Label className="text-xs">Descrição</Label>
-                      <Textarea
-                        value={config.content.description}
-                        onChange={(e) => updateConfig({
-                          content: { ...config.content, description: e.target.value }
-                        })}
-                        placeholder="Bem-vindos à Central dos Convidados!"
-                        rows={3}
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+              <ContentEditor
+                stories={config.content.stories}
+                onChange={(stories) => updateConfig({
+                  content: { ...config.content, stories }
+                })}
+                welcomeMessage={config.content.welcomeMessage}
+                onWelcomeChange={(welcome) => updateConfig({
+                  content: { ...config.content, welcomeMessage: welcome }
+                })}
+                footerText={config.content.footerText}
+                onFooterChange={(text) => updateConfig({
+                  content: { ...config.content, footerText: text }
+                })}
+                tabLabels={config.content.tabLabels}
+                onTabLabelsChange={(labels) => updateConfig({
+                  content: { ...config.content, tabLabels: labels }
+                })}
+              />
             )}
 
             {activePanel === 'layout' && (
