@@ -377,21 +377,21 @@ const Index = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-24 px-6 bg-gradient-to-br from-foreground to-foreground/90 text-background">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-6xl font-serif font-bold mb-8">
             Organizar seu casamento não precisa ser confuso
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-background/80 mb-12 max-w-2xl mx-auto leading-relaxed">
             Com o LovanaApp, você se sente no controle — com apoio, beleza e clareza
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/formulario-pos-pagamento">
-              <Button size="lg" className="bg-pink-600 hover:bg-pink-700 text-lg px-8 py-3">
-                Quero experimentar agora 💕
+              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-10 py-4 rounded-lg transition-all duration-300 hover:shadow-xl">
+                Quero experimentar agora
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-pink-200 text-pink-600 hover:bg-pink-50">
+            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-background/30 text-background hover:bg-background hover:text-foreground transition-all duration-300">
               Ver todos os planos
             </Button>
           </div>
