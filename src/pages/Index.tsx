@@ -127,10 +127,10 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <h1 className="text-5xl lg:text-7xl font-serif font-bold text-foreground leading-tight">
-                O casamento dos seus <span className="italic text-foreground/80">sonhos</span> merece planejamento de luxo
+                O casamento dos seus <span className="italic text-foreground/80">sonhos</span> merece planejamento eficiente
               </h1>
               <p className="text-xl text-foreground/70 leading-relaxed max-w-lg">
-                Uma plataforma sofisticada e elegante para noivas que valorizam a excelência em cada detalhe
+                Uma plataforma inteligente e organizada para noivas que valorizam eficiência em cada detalhe
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/formulario-pos-pagamento">
@@ -163,10 +163,10 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-6xl font-serif font-bold text-foreground mb-6">
-              Funcionalidades ✨ Premium
+              Funcionalidades ✨ Inteligentes
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              Tudo que você precisa para planejar o casamento perfeito, em uma plataforma elegante e intuitiva
+              Tudo que você precisa para planejar o casamento perfeito, em uma plataforma eficiente e organizada
             </p>
           </div>
           
