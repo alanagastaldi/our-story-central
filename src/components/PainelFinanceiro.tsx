@@ -111,7 +111,7 @@ const PainelFinanceiro = () => {
       </div>
 
       {/* Resumo Financeiro */}
-      <Card className="bg-gradient-to-r from-pink-50 to-purple-50 border-pink-200">
+      <Card className="bg-gradient-to-r from-accent/10 to-accent/5 border-border">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <DollarSign className="h-5 w-5" />
@@ -119,7 +119,7 @@ const PainelFinanceiro = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-3xl font-bold text-pink-600">
+          <div className="text-3xl font-bold text-foreground">
             R$ {totalGastos.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
           </div>
           <p className="text-gray-600 mt-1">{gastos.length} itens registrados</p>
@@ -186,7 +186,7 @@ const PainelFinanceiro = () => {
             
             <Button 
               onClick={adicionarGasto}
-              className="w-full bg-pink-600 hover:bg-pink-700"
+              className="w-full bg-foreground hover:bg-foreground/90 text-background"
             >
               <Plus className="h-4 w-4 mr-2" />
               Adicionar Gasto

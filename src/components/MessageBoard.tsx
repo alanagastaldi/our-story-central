@@ -50,7 +50,7 @@ const MessageBoard = () => {
   return (
     <div className="space-y-6">
       {/* Send Message Form */}
-      <Card className="border-wedding-pink">
+      <Card className="border-foreground">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <MessageSquare className="w-5 h-5" />
@@ -93,13 +93,13 @@ const MessageBoard = () => {
       {/* Messages Display */}
       <div className="space-y-4">
         <h3 className="text-lg font-semibold flex items-center gap-2">
-          <Heart className="w-5 h-5 text-wedding-pink" />
+          <Heart className="w-5 h-5 text-foreground" />
           Mensagens dos Convidados
         </h3>
         
         <div className="space-y-4">
           {messages.map((msg) => (
-            <Card key={msg.id} className="bg-wedding-pink-soft border-none">
+            <Card key={msg.id} className="bg-foreground/5 border-none">
               <CardContent className="p-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -115,7 +115,7 @@ const MessageBoard = () => {
 
         {messages.length === 0 && (
           <div className="text-center py-8 text-muted-foreground">
-            <MessageSquare className="w-12 h-12 mx-auto mb-4 text-wedding-pink" />
+            <MessageSquare className="w-12 h-12 mx-auto mb-4 text-foreground" />
             <p>Seja o primeiro a deixar uma mensagem carinhosa! 💕</p>
           </div>
         )}

@@ -167,7 +167,7 @@ const Moodboard = () => {
             </Button>
             <Button 
               onClick={() => fileInputRef.current?.click()}
-              className="bg-pink-600 hover:bg-pink-700 flex items-center space-x-2"
+              className="bg-foreground hover:bg-foreground/90 text-background flex items-center space-x-2"
             >
               <Upload className="h-4 w-4" />
               <span>Upload</span>
@@ -195,7 +195,7 @@ const Moodboard = () => {
               </div>
               <Button 
                 onClick={() => fileInputRef.current?.click()}
-                className="bg-pink-600 hover:bg-pink-700"
+                className="bg-foreground hover:bg-foreground/90 text-background"
               >
                 Fazer upload
               </Button>
@@ -243,7 +243,7 @@ const Moodboard = () => {
         <h2 className="text-2xl font-bold">Moodboard</h2>
         <Button 
           onClick={() => setIsCreatingFolder(true)}
-          className="bg-pink-600 hover:bg-pink-700 flex items-center space-x-2"
+          className="bg-foreground hover:bg-foreground/90 text-background flex items-center space-x-2"
         >
           <FolderPlus className="h-4 w-4" />
           <span>Nova Pasta</span>
@@ -271,7 +271,7 @@ const Moodboard = () => {
               <Button variant="outline" onClick={() => setIsCreatingFolder(false)}>
                 Cancelar
               </Button>
-              <Button onClick={createFolder} className="bg-pink-600 hover:bg-pink-700">
+              <Button onClick={createFolder} className="bg-foreground hover:bg-foreground/90 text-background">
                 Criar Pasta
               </Button>
             </div>
@@ -292,7 +292,7 @@ const Moodboard = () => {
             </div>
             <Button 
               onClick={() => setIsCreatingFolder(true)}
-              className="bg-pink-600 hover:bg-pink-700"
+              className="bg-foreground hover:bg-foreground/90 text-background"
             >
               Criar primeira pasta
             </Button>
@@ -338,7 +338,7 @@ const Moodboard = () => {
                               />
                               <Button 
                                 onClick={() => renameFolder(folder.id)}
-                                className="bg-pink-600 hover:bg-pink-700"
+                                className="bg-foreground hover:bg-foreground/90 text-background"
                               >
                                 <Edit2 className="h-4 w-4" />
                               </Button>

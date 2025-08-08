@@ -59,7 +59,7 @@ const PhotoGallery = () => {
   return (
     <div className="space-y-6">
       {/* Upload Section */}
-      <Card className="border-dashed border-2 border-wedding-pink">
+      <Card className="border-dashed border-2 border-foreground">
         <CardHeader className="text-center">
           <CardTitle className="flex items-center justify-center gap-2">
             <Upload className="w-5 h-5" />
@@ -122,7 +122,7 @@ const PhotoGallery = () => {
             >
               <CardContent className="p-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-12 h-12 bg-wedding-pink rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-foreground rounded-lg flex items-center justify-center">
                     <FolderOpen className="w-6 h-6 text-wedding-dark" />
                   </div>
                   <div className="flex-1 space-y-1">
@@ -160,7 +160,7 @@ const PhotoGallery = () => {
               {Array.from({length: 8}).map((_, i) => (
                 <div 
                   key={i}
-                  className="aspect-square bg-wedding-pink-soft rounded-lg flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+                  className="aspect-square bg-foreground/10 rounded-lg flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
                 >
                   {i % 3 === 0 ? (
                     <Video className="w-8 h-8 text-muted-foreground" />

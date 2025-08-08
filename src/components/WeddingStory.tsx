@@ -216,8 +216,8 @@ const WeddingStory = () => {
             <div className={`
               w-16 h-16 rounded-full border-2 flex items-center justify-center transition-all duration-200
               ${selectedStory === story.id 
-                ? 'border-primary bg-wedding-pink shadow-lg scale-105' 
-                : 'border-border bg-card hover:border-wedding-pink hover:scale-105'
+                ? 'border-primary bg-foreground/10 shadow-lg scale-105' 
+                : 'border-border bg-card hover:border-foreground hover:scale-105'
               }
             `}>
               <span className="text-2xl">{story.emoji}</span>
