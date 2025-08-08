@@ -391,7 +391,7 @@ const Index = () => {
                 Quero experimentar agora
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-background/30 text-background hover:bg-background hover:text-foreground transition-all duration-300">
+            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-background transition-all duration-300">
               Ver todos os planos
             </Button>
           </div>
@@ -399,20 +399,20 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-6 bg-foreground text-background">
+      <footer className="py-16 px-6 bg-background text-foreground">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <div className="text-3xl font-serif font-bold mb-6">LovanaApp</div>
-            <p className="text-background/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
               A plataforma de planejamento de casamento mais inteligente e organizada do Brasil
             </p>
             <div className="flex justify-center space-x-8 mb-8">
-              <a href="#funcionalidades" className="text-background/70 hover:text-background transition-colors">Funcionalidades</a>
-              <a href="#planos" className="text-background/70 hover:text-background transition-colors">Planos</a>
-              <a href="#depoimentos" className="text-background/70 hover:text-background transition-colors">Depoimentos</a>
+              <a href="#funcionalidades" className="text-foreground/70 hover:text-foreground transition-colors">Funcionalidades</a>
+              <a href="#planos" className="text-foreground/70 hover:text-foreground transition-colors">Planos</a>
+              <a href="#depoimentos" className="text-foreground/70 hover:text-foreground transition-colors">Depoimentos</a>
             </div>
-            <div className="border-t border-background/20 pt-8">
-              <p className="text-background/60 text-sm">
+            <div className="border-t border-foreground/20 pt-8">
+              <p className="text-foreground/60 text-sm">
                 © 2024 LovanaApp. Todos os direitos reservados. Desenvolvido com 💍 para noivas organizadas.
               </p>
             </div>
