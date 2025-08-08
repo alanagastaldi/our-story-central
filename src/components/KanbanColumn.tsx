@@ -16,7 +16,7 @@ interface KanbanColumnProps {
 const getColumnColor = (columnId: string) => {
   switch (columnId) {
     case 'todo':
-      return 'border-red-200 bg-red-50';
+      return 'border-blue-200 bg-blue-50';
     case 'doing':
       return 'border-blue-200 bg-blue-50';
     case 'done':
