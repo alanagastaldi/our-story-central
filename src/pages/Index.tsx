@@ -399,16 +399,23 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="text-2xl font-bold text-pink-400 mb-4">LovanaApp</div>
-          <p className="text-gray-400 mb-6">
-            Transformando o planejamento de casamentos em uma experiência encantadora
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">Termos de Uso</a>
-            <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">Privacidade</a>
-            <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">Contato</a>
+      <footer className="py-16 px-6 bg-foreground text-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <div className="text-3xl font-serif font-bold mb-6">LovanaApp</div>
+            <p className="text-background/70 mb-8 max-w-2xl mx-auto">
+              A plataforma de planejamento de casamento mais inteligente e organizada do Brasil
+            </p>
+            <div className="flex justify-center space-x-8 mb-8">
+              <a href="#funcionalidades" className="text-background/70 hover:text-background transition-colors">Funcionalidades</a>
+              <a href="#planos" className="text-background/70 hover:text-background transition-colors">Planos</a>
+              <a href="#depoimentos" className="text-background/70 hover:text-background transition-colors">Depoimentos</a>
+            </div>
+            <div className="border-t border-background/20 pt-8">
+              <p className="text-background/60 text-sm">
+                © 2024 LovanaApp. Todos os direitos reservados. Desenvolvido com 💍 para noivas organizadas.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
