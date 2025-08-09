@@ -301,7 +301,7 @@ const DesignEditor = () => {
       <div className="flex items-center justify-between p-4 border-b border-border bg-white">
         <div className="flex items-center gap-4">
           <h1 className="text-xl font-serif font-bold text-black flex items-center gap-2">
-            🎨 Editor da Central dos Convidados
+            🎨 Editor da Central Convidados
           </h1>
           <div className="flex items-center gap-1">
             <Button

@@ -37,7 +37,7 @@ const CentralNoivas = () => {
     { id: "checklist", label: "Checklist", icon: ClipboardList, premium: false },
     { id: "presentes", label: "Lista de Presentes", icon: Gift, premium: false },
     { id: "enxoval", label: "Lista de Enxoval", icon: ShoppingBasket, premium: false },
-    { id: "design", label: "Central dos Convidados", icon: Palette, premium: true },
+    { id: "design", label: "Central Convidados", icon: Palette, premium: true },
     { id: "financeiro", label: "Painel Financeiro", icon: DollarSign, premium: true },
     { id: "moodboard", label: "Moodboard", icon: Image, premium: false },
     { id: "convidados", label: "Gestão de Convidados", icon: Users, premium: false },
@@ -78,7 +78,7 @@ const CentralNoivas = () => {
       onClick: () => setActiveSection("enxoval")
     },
     {
-      title: "Central dos Convidados",
+      title: "Central Convidados",
       description: "Personalize a central dos convidados",
       icon: Palette,
       color: "bg-gradient-to-br from-accent/20 to-accent/5 border-border/50",
@@ -260,7 +260,7 @@ const CentralNoivas = () => {
             </Button>
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="sm" className="border-foreground/20 text-foreground hover:bg-foreground hover:text-background">
-                Ver Central dos Convidados
+                Ver Central Convidados
               </Button>
               <div className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center">
                 <span className="text-background text-sm font-medium">A</span>
