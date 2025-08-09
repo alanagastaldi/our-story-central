@@ -225,14 +225,6 @@ const GuestManagement = () => {
                 <Download className="h-4 w-4" />
                 Exportar Lista
               </Button>
-              <Button 
-                variant="outline" 
-                onClick={handleShareInvite}
-                className="flex items-center gap-2"
-              >
-                <Share2 className="h-4 w-4" />
-                Compartilhar Convite
-              </Button>
             </div>
           </div>
         </CardContent>
