@@ -154,11 +154,47 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="bg-gradient-to-br from-accent to-background h-96 rounded-2xl flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <Smartphone className="h-16 w-16 text-foreground/60 mx-auto" />
-                    <p className="text-foreground/60 font-medium">Preview do App</p>
-                    <div className="w-32 h-2 bg-foreground/20 rounded-full mx-auto"></div>
+                <div className="bg-gradient-to-br from-accent to-background h-96 rounded-2xl overflow-hidden">
+                  {/* Mini Central das Noivas Preview */}
+                  <div className="h-full p-4">
+                    {/* Header */}
+                    <div className="bg-white/90 rounded-lg p-2 mb-3 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-6 h-6 bg-wedding-primary rounded-full flex items-center justify-center">
+                          <Heart className="h-3 w-3 text-white" />
+                        </div>
+                        <span className="text-xs font-semibold text-wedding-dark">Central das Noivas</span>
+                      </div>
+                      <div className="flex gap-1">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Dashboard Cards Grid */}
+                    <div className="grid grid-cols-2 gap-2 h-64">
+                      <div className="bg-white/80 rounded-lg p-3 flex flex-col items-center justify-center text-center">
+                        <CheckSquare className="h-6 w-6 text-wedding-primary mb-1" />
+                        <span className="text-xs font-medium text-wedding-dark">Checklist</span>
+                        <span className="text-xs text-wedding-dark/60">15/20</span>
+                      </div>
+                      <div className="bg-white/80 rounded-lg p-3 flex flex-col items-center justify-center text-center">
+                        <Gift className="h-6 w-6 text-wedding-secondary mb-1" />
+                        <span className="text-xs font-medium text-wedding-dark">Lista de Presentes</span>
+                        <span className="text-xs text-wedding-dark/60">32 itens</span>
+                      </div>
+                      <div className="bg-white/80 rounded-lg p-3 flex flex-col items-center justify-center text-center">
+                        <Users className="h-6 w-6 text-wedding-accent mb-1" />
+                        <span className="text-xs font-medium text-wedding-dark">Convidados</span>
+                        <span className="text-xs text-wedding-dark/60">84 pessoas</span>
+                      </div>
+                      <div className="bg-white/80 rounded-lg p-3 flex flex-col items-center justify-center text-center">
+                        <DollarSign className="h-6 w-6 text-green-600 mb-1" />
+                        <span className="text-xs font-medium text-wedding-dark">Financeiro</span>
+                        <span className="text-xs text-wedding-dark/60">R$ 25.000</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
