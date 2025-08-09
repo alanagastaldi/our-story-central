@@ -221,13 +221,13 @@ const CentralNoivas = () => {
           <p className="text-sm text-foreground/70 mt-1">Ana & João</p>
         </div>
         
-        <nav className="p-4 space-y-1">
+        <nav className="px-2 py-4 space-y-1">
           {sections.map((section) => (
             <Button
               key={section.id}
               variant={activeSection === section.id ? "default" : "ghost"}
               className={cn(
-                "w-full h-9 justify-start px-3 hover:bg-accent/50 transition-all duration-200 relative",
+                "w-full h-9 justify-start px-4 pr-6 hover:bg-accent/50 transition-all duration-200 relative",
                 activeSection === section.id && "bg-foreground text-background hover:bg-foreground/90"
               )}
               onClick={() => {
