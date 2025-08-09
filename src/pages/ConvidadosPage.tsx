@@ -151,13 +151,14 @@ const ConvidadosPage = () => {
       </div>
 
       {/* Navigation Tabs */}
-      <div className="sticky top-0 bg-white/80 backdrop-blur-md border-b border-border/50 z-10 shadow-sm">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex space-x-2 py-3">
+      <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-border/50 z-10 shadow-sm">
+        <div className="w-full px-2 sm:px-4">
+          <div className="flex space-x-1 py-2 overflow-x-auto scrollbar-hide">
             <Button
               variant={activeTab === 'stories' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('stories')}
-              className={`flex-1 transition-all duration-300 hover-scale ${
+              size="sm"
+              className={`flex-1 min-w-[100px] transition-all duration-300 text-xs sm:text-sm ${
                 activeTab === 'stories' 
                   ? 'bg-wedding-primary text-white shadow-lg' 
                   : 'hover:bg-wedding-primary/10'
@@ -168,7 +169,8 @@ const ConvidadosPage = () => {
             <Button
               variant={activeTab === 'gallery' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('gallery')}
-              className={`flex-1 transition-all duration-300 hover-scale ${
+              size="sm"
+              className={`flex-1 min-w-[100px] transition-all duration-300 text-xs sm:text-sm ${
                 activeTab === 'gallery' 
                   ? 'bg-wedding-primary text-white shadow-lg' 
                   : 'hover:bg-wedding-primary/10'
@@ -179,7 +181,8 @@ const ConvidadosPage = () => {
             <Button
               variant={activeTab === 'messages' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('messages')}
-              className={`flex-1 transition-all duration-300 hover-scale ${
+              size="sm"
+              className={`flex-1 min-w-[100px] transition-all duration-300 text-xs sm:text-sm ${
                 activeTab === 'messages' 
                   ? 'bg-wedding-primary text-white shadow-lg' 
                   : 'hover:bg-wedding-primary/10'
@@ -191,17 +194,17 @@ const ConvidadosPage = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 py-8">
+      <div className="w-full px-2 sm:px-4 lg:px-6 py-4 sm:py-8">
         {/* Stories Tab */}
         {activeTab === 'stories' && (
           <div className="space-y-8">
             {/* Welcome Message */}
-            <div className="flex justify-center">
-              <Card className="bg-white/90 backdrop-blur-sm border border-white/20 shadow-elegant rounded-3xl max-w-4xl mx-auto w-full">
-                <CardContent className="p-6">
+            <div className="w-full">
+              <Card className="bg-white/90 backdrop-blur-sm border border-white/20 shadow-elegant rounded-2xl sm:rounded-3xl w-full">
+                <CardContent className="p-4 sm:p-6">
                   <div className="text-center animate-in fade-in duration-700">
-                    <h3 className="text-xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
-                    <p className="text-muted-foreground mb-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4">
                       Toque nos círculos abaixo para ver todas as informações importantes sobre o nosso casamento
                     </p>
                   </div>
@@ -209,25 +212,25 @@ const ConvidadosPage = () => {
               </Card>
             </div>
 
-            {/* Stories Navigation - Instagram Style Centralizado */}
-            <div className="flex justify-center">
-              <div className="flex gap-8 overflow-x-auto scrollbar-hide px-4 py-6 max-w-4xl">
+            {/* Stories Navigation - Mobile Optimized Grid */}
+            <div className="w-full">
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 px-2 py-6 justify-items-center">
                 {stories.map((story) => (
                   <button
                     key={story.id}
                     onClick={() => setSelectedStory(selectedStory === story.id ? '' : story.id)}
-                    className="flex-shrink-0 flex flex-col items-center space-y-3 group"
+                    className="flex flex-col items-center space-y-2 group w-full max-w-[80px]"
                   >
                     {/* Story Circle with Emoji Inside */}
                     <div className="relative">
-                      <div className={`w-20 h-20 rounded-full p-1 transition-all duration-300 ${
+                      <div className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full p-1 transition-all duration-300 ${
                         selectedStory === story.id 
                           ? 'bg-white shadow-lg border-2 border-wedding-pink scale-110' 
                           : 'bg-white shadow-md border border-gray-200 group-hover:shadow-lg group-hover:border-wedding-pink'
                       }`}>
                         <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
                           {/* Emoji replacing icon */}
-                          <div className={`transition-transform duration-300 ${
+                          <div className={`transition-transform duration-300 text-lg sm:text-xl md:text-2xl ${
                             selectedStory === story.id ? 'scale-110' : 'group-hover:scale-105'
                           }`}>
                             {story.icon}
@@ -237,7 +240,7 @@ const ConvidadosPage = () => {
                     </div>
                     
                     {/* Story Label */}
-                    <span className={`text-sm font-medium transition-colors duration-300 text-center min-w-0 ${
+                    <span className={`text-xs sm:text-sm font-medium transition-colors duration-300 text-center leading-tight ${
                       selectedStory === story.id 
                         ? 'text-primary font-semibold' 
                         : 'text-muted-foreground group-hover:text-primary'
@@ -249,13 +252,13 @@ const ConvidadosPage = () => {
               </div>
             </div>
 
-            {/* Selected Story Content - Full Width Card */}
+            {/* Selected Story Content - Mobile Optimized Card */}
             {selectedStory && (
-              <div className="animate-fade-in">
-                <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm rounded-3xl overflow-hidden">
+              <div className="animate-fade-in px-2">
+                <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl overflow-hidden">
                   <div className="bg-gradient-to-r from-wedding-primary/10 to-wedding-accent/10 p-1">
-                    <CardContent className="bg-white rounded-3xl p-8 m-1">
-                      <div className="max-w-2xl mx-auto">
+                    <CardContent className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 m-1">
+                      <div className="w-full">
                         {stories.find(s => s.id === selectedStory)?.content}
                       </div>
                     </CardContent>
@@ -301,18 +304,18 @@ const ConvidadosPage = () => {
       {/* Footer */}
       <footer className="relative overflow-hidden mt-16">
         <div className="absolute inset-0 bg-gradient-to-r from-wedding-primary/10 via-wedding-pink/20 to-wedding-accent/10"></div>
-        <div className="relative bg-white/60 backdrop-blur-sm py-12">
-          <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="relative bg-white/60 backdrop-blur-sm py-8 sm:py-12">
+          <div className="w-full px-4 text-center">
             <div className="animate-fade-in">
-              <p className="text-lg text-muted-foreground mb-6 font-medium">
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 font-medium">
                 Obrigada por fazer parte do nosso grande dia! 🙏
               </p>
-              <div className="flex justify-center gap-4">
-                <Button variant="outline" size="sm" className="hover-scale border-wedding-primary/30 hover:bg-wedding-primary/10">
+              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+                <Button variant="outline" size="sm" className="w-full sm:w-auto hover-scale border-wedding-primary/30 hover:bg-wedding-primary/10">
                   <Share2 className="w-4 h-4 mr-2" />
                   Compartilhar
                 </Button>
-                <Button variant="outline" size="sm" className="hover-scale border-wedding-primary/30 hover:bg-wedding-primary/10">
+                <Button variant="outline" size="sm" className="w-full sm:w-auto hover-scale border-wedding-primary/30 hover:bg-wedding-primary/10">
                   <Download className="w-4 h-4 mr-2" />
                   Baixar Fotos
                 </Button>
