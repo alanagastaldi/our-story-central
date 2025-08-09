@@ -235,10 +235,10 @@ const CentralNoivas = () => {
                 setSidebarOpen(false);
               }}
             >
-              <section.icon className="h-4 w-4 mr-3" />
-              <span className="text-sm">{section.label}</span>
+              <section.icon className="h-4 w-4 mr-2" />
+              <span className="text-sm ml-2">{section.label}</span>
               {section.premium && (
-                <Lock className="h-3 w-3 ml-auto text-amber-500 opacity-80" />
+                <Lock className="h-3 w-3 ml-auto text-slate-500 opacity-70 stroke-1" />
               )}
             </Button>
           ))}
