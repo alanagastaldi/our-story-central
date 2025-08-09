@@ -31,16 +31,16 @@ const categorias = [
 ];
 
 const cores = [
-  "#FF6B9D",
-  "#C44FAB", 
-  "#9A3AB1",
-  "#7B2CBF",
-  "#5A189A",
-  "#240046",
-  "#FF8500",
-  "#FFAA00",
-  "#FFD60A",
-  "#003566"
+  "#F8BBD9",
+  "#E4C1F9", 
+  "#D0C4F7",
+  "#C8B6E2",
+  "#B8A9C9",
+  "#DDD5EA",
+  "#FFE5CC",
+  "#FFE4B5",
+  "#FFF2B2",
+  "#B4C7E7"
 ];
 
 const PainelFinanceiro = () => {
