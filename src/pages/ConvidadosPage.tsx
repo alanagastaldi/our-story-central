@@ -61,7 +61,7 @@ const ConvidadosPage = () => {
     {
       id: 'presentes',
       icon: <span className="text-2xl">🎁</span>,
-      label: 'Presentes',
+      label: 'Lista de Presentes',
       emoji: '🎁',
       content: (
         <div className="space-y-4">
@@ -83,7 +83,7 @@ const ConvidadosPage = () => {
     {
       id: 'confirmacao',
       icon: <span className="text-2xl">📬</span>,
-      label: 'RSVP',
+      label: 'Confirmar Presença',
       emoji: '📬',
       content: (
         <div className="space-y-4">
