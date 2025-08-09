@@ -227,7 +227,7 @@ const CentralNoivas = () => {
               key={section.id}
               variant={activeSection === section.id ? "default" : "ghost"}
               className={cn(
-                "w-full justify-start hover:bg-accent/50 transition-all duration-200",
+                "w-full h-10 justify-start hover:bg-accent/50 transition-all duration-200 flex items-center",
                 activeSection === section.id && "bg-foreground text-background hover:bg-foreground/90"
               )}
               onClick={() => {
@@ -235,10 +235,10 @@ const CentralNoivas = () => {
                 setSidebarOpen(false);
               }}
             >
-              <section.icon className="h-4 w-4 mr-3" />
-              {section.label}
+              <section.icon className="h-4 w-4 mr-3 flex-shrink-0" />
+              <span className="flex-1 text-left">{section.label}</span>
               {section.premium && (
-                <Lock className="h-3 w-3 ml-auto text-amber-600" />
+                <Lock className="h-3 w-3 ml-2 text-amber-600 flex-shrink-0" />
               )}
             </Button>
           ))}
