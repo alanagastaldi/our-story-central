@@ -72,10 +72,6 @@ const ConvidadosPage = () => {
               <Gift className="w-4 h-4 mr-2" />
               Lista de Presentes
             </Button>
-            <Button variant="outline" className="w-full" onClick={() => window.open('#', '_blank')}>
-              <Gift className="w-4 h-4 mr-2" />
-              PIX: casamento@email.com
-            </Button>
           </div>
         </div>
       )
