@@ -242,23 +242,6 @@ const ConvidadosPage = () => {
                       <p className="text-muted-foreground mb-8">
                         Toque nos círculos acima para ver todas as informações importantes sobre o nosso casamento
                       </p>
-                      <div className="flex justify-center gap-4">
-                        <Button 
-                          variant="outline" 
-                          onClick={() => setActiveTab('gallery')}
-                          className="hover:bg-wedding-pink-soft border-wedding-pink"
-                        >
-                          <Camera className="w-4 h-4 mr-2" />
-                          Ver Galeria
-                        </Button>
-                        <Button 
-                          onClick={() => setActiveTab('messages')}
-                          className="bg-wedding-dark hover:bg-wedding-dark/90"
-                        >
-                          <MessageCircle className="w-4 h-4 mr-2" />
-                          Deixar Mensagem
-                        </Button>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
