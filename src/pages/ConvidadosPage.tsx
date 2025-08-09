@@ -70,7 +70,7 @@ const ConvidadosPage = () => {
           <div className="space-y-2">
             <Button variant="outline" className="w-full" onClick={() => window.open('#', '_blank')}>
               <Gift className="w-4 h-4 mr-2" />
-              Lista Casas Bahia
+              Lista de Presentes
             </Button>
             <Button variant="outline" className="w-full" onClick={() => window.open('#', '_blank')}>
               <Gift className="w-4 h-4 mr-2" />
