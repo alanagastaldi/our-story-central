@@ -106,7 +106,7 @@ const ConvidadosPage = () => {
       content: (
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-primary">Playlist do Casamento</h3>
-          <p className="text-muted-foreground">Contribua com suas músicas favoritas para nossa festa!</p>
+          <p className="text-muted-foreground">Entre no clima com a nossa playlist da festa!</p>
           <Button className="w-full" onClick={() => window.open('https://spotify.com', '_blank')}>
             <Music className="w-4 h-4 mr-2" />
             Abrir Playlist no Spotify
