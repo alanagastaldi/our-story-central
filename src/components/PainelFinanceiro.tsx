@@ -211,9 +211,13 @@ const PainelFinanceiro = () => {
                       outerRadius={80}
                       dataKey="value"
                       label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                      labelLine={false}
                     >
                       {dadosGrafico.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.fill} />
+                        <Cell 
+                          key={`cell-${index}`} 
+                          fill={entry.fill}
+                        />
                       ))}
                     </Pie>
                     <Tooltip 
@@ -224,6 +228,13 @@ const PainelFinanceiro = () => {
                     />
                   </PieChart>
                 </ResponsiveContainer>
+                <style>{`
+                  .recharts-pie-label-text {
+                    fill: #000000 !important;
+                    font-weight: 500;
+                    font-size: 12px;
+                  }
+                `}</style>
               </div>
             ) : (
               <div className="h-80 flex items-center justify-center text-gray-500">
