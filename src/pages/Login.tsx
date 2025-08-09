@@ -90,7 +90,8 @@ const Login = () => {
             {/* Login Button */}
             <Button
               type="submit"
-              className="w-full h-12 rounded-xl bg-gradient-to-r from-rose-400 to-pink-400 hover:from-rose-500 hover:to-pink-500 text-white font-medium shadow-lg shadow-rose-200/50 transition-all duration-300 hover:shadow-xl hover:shadow-rose-300/50"
+              variant="outline"
+              className="w-full h-12 rounded-xl border-rose-300 text-black hover:bg-rose-50 hover:border-rose-400 transition-all duration-300"
             >
               Entrar
             </Button>
