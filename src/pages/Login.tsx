@@ -81,7 +81,7 @@ const Login = () => {
             <div className="text-right">
               <Link 
                 to="/forgot-password" 
-                className="text-sm text-rose-600 hover:text-rose-700 transition-colors"
+                className="text-sm text-black hover:text-slate-700 transition-colors"
               >
                 Esqueceu a senha?
               </Link>
@@ -109,7 +109,7 @@ const Login = () => {
             <Button
               type="button"
               variant="outline"
-              className="w-full h-12 rounded-xl border-rose-300 text-rose-600 hover:bg-rose-50 hover:border-rose-400 transition-all duration-300"
+              className="w-full h-12 rounded-xl border-rose-300 text-black hover:bg-rose-50 hover:border-rose-400 transition-all duration-300"
             >
               Criar nova conta
             </Button>
@@ -118,11 +118,11 @@ const Login = () => {
           {/* Footer */}
           <div className="text-center mt-8 text-xs text-slate-500">
             Ao continuar, você concorda com nossos{" "}
-            <Link to="/terms" className="text-rose-600 hover:underline">
+            <Link to="/terms" className="text-black hover:underline">
               Termos de Uso
             </Link>{" "}
             e{" "}
-            <Link to="/privacy" className="text-rose-600 hover:underline">
+            <Link to="/privacy" className="text-black hover:underline">
               Política de Privacidade
             </Link>
           </div>
@@ -131,7 +131,7 @@ const Login = () => {
         {/* Bottom Text */}
         <div className="text-center mt-6 text-sm text-slate-600">
           Já tem uma conta?{" "}
-          <Link to="/" className="text-rose-600 hover:text-rose-700 font-medium">
+          <Link to="/" className="text-black hover:text-slate-700 font-medium">
             Voltar ao início
           </Link>
         </div>
