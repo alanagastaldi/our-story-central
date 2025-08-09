@@ -613,12 +613,6 @@ const EnxovalList = () => {
                             {item.name}
                           </span>
                           <div className="flex items-center gap-2">
-                            <Badge variant={getPriorityColor(item.priority)}>
-                              {item.priority === 'alta' && '🔴'}
-                              {item.priority === 'media' && '🟡'}
-                              {item.priority === 'baixa' && '🟢'}
-                              {item.priority}
-                            </Badge>
                             {item.isCustom && (
                               <div className="flex gap-1">
                                 <Button
