@@ -435,7 +435,7 @@ const Index = () => {
 
 
       {/* FAQ */}
-      <section id="faq" className="py-16 px-4 bg-gradient-to-r from-purple-50 to-pink-50">
+      <section id="faq" className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -445,7 +445,7 @@ const Index = () => {
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <Card key={index} className="bg-white/80 backdrop-blur-sm">
+              <Card key={index} className="bg-white">
                 <CardContent className="p-0">
                   <button
                     className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
