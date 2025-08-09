@@ -234,12 +234,12 @@ const ConvidadosPage = () => {
             {/* Welcome Message when no story selected */}
             {!selectedStory && (
               <div className="flex justify-center">
-                <Card className="bg-white/90 backdrop-blur-sm border border-white/20 shadow-elegant rounded-3xl max-w-md mx-auto">
-                  <CardContent className="p-8">
+                <Card className="bg-white/90 backdrop-blur-sm border border-white/20 shadow-elegant rounded-3xl max-w-4xl mx-auto w-full">
+                  <CardContent className="p-6">
                     <div className="text-center animate-in fade-in duration-700">
-                      <div className="text-6xl mb-4">💕</div>
-                      <h3 className="text-2xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
-                      <p className="text-muted-foreground mb-8">
+                      <div className="text-4xl mb-3">💕</div>
+                      <h3 className="text-xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
+                      <p className="text-muted-foreground mb-4">
                         Toque nos círculos acima para ver todas as informações importantes sobre o nosso casamento
                       </p>
                     </div>
