@@ -221,13 +221,13 @@ const CentralNoivas = () => {
           <p className="text-sm text-foreground/70 mt-1">Ana & João</p>
         </div>
         
-        <nav className="p-4 space-y-2">
+        <nav className="p-4 space-y-1">
           {sections.map((section) => (
             <Button
               key={section.id}
               variant={activeSection === section.id ? "default" : "ghost"}
               className={cn(
-                "w-full h-10 justify-between px-3 hover:bg-accent/50 transition-all duration-200",
+                "w-full h-9 justify-start px-3 hover:bg-accent/50 transition-all duration-200 relative",
                 activeSection === section.id && "bg-foreground text-background hover:bg-foreground/90"
               )}
               onClick={() => {
@@ -235,12 +235,10 @@ const CentralNoivas = () => {
                 setSidebarOpen(false);
               }}
             >
-              <div className="flex items-center">
-                <section.icon className="h-4 w-4 mr-3" />
-                <span>{section.label}</span>
-              </div>
+              <section.icon className="h-4 w-4 mr-3" />
+              <span className="text-sm">{section.label}</span>
               {section.premium && (
-                <Lock className="h-3 w-3 text-amber-600" />
+                <Lock className="h-3 w-3 ml-auto text-amber-500 opacity-80" />
               )}
             </Button>
           ))}
