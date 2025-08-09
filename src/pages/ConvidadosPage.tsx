@@ -235,29 +235,35 @@ const ConvidadosPage = () => {
 
             {/* Welcome Message when no story selected */}
             {!selectedStory && (
-              <div className="text-center py-12 animate-in fade-in duration-700">
-                <div className="text-6xl mb-4">💕</div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
-                <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-                  Toque nos círculos acima para ver todas as informações importantes sobre o nosso casamento
-                </p>
-                <div className="flex justify-center gap-4">
-                  <Button 
-                    variant="outline" 
-                    onClick={() => setActiveTab('gallery')}
-                    className="hover:bg-wedding-pink-soft border-wedding-pink"
-                  >
-                    <Camera className="w-4 h-4 mr-2" />
-                    Ver Galeria
-                  </Button>
-                  <Button 
-                    onClick={() => setActiveTab('messages')}
-                    className="bg-wedding-dark hover:bg-wedding-dark/90"
-                  >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Deixar Mensagem
-                  </Button>
-                </div>
+              <div className="flex justify-center">
+                <Card className="bg-white/90 backdrop-blur-sm border border-white/20 shadow-elegant rounded-3xl max-w-md mx-auto">
+                  <CardContent className="p-8">
+                    <div className="text-center animate-in fade-in duration-700">
+                      <div className="text-6xl mb-4">💕</div>
+                      <h3 className="text-2xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
+                      <p className="text-muted-foreground mb-8">
+                        Toque nos círculos acima para ver todas as informações importantes sobre o nosso casamento
+                      </p>
+                      <div className="flex justify-center gap-4">
+                        <Button 
+                          variant="outline" 
+                          onClick={() => setActiveTab('gallery')}
+                          className="hover:bg-wedding-pink-soft border-wedding-pink"
+                        >
+                          <Camera className="w-4 h-4 mr-2" />
+                          Ver Galeria
+                        </Button>
+                        <Button 
+                          onClick={() => setActiveTab('messages')}
+                          className="bg-wedding-dark hover:bg-wedding-dark/90"
+                        >
+                          <MessageCircle className="w-4 h-4 mr-2" />
+                          Deixar Mensagem
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             )}
           </div>
