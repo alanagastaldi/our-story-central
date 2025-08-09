@@ -136,37 +136,54 @@ const ConvidadosPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-background">
       {/* Header */}
-      <div className="text-center py-8 px-4 bg-gradient-to-b from-wedding-pink-soft to-background">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-2">
-          Ana & Carlos 💕
-        </h1>
-        <p className="text-muted-foreground">Bem-vindos à Central dos Convidados!</p>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-wedding-primary/20 via-wedding-pink/30 to-wedding-accent/20"></div>
+        <div className="relative text-center py-16 px-4">
+          <div className="animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-wedding-primary to-wedding-accent bg-clip-text text-transparent mb-4">
+              Ana & Carlos 💕
+            </h1>
+            <p className="text-lg text-muted-foreground font-medium">Bem-vindos à Central dos Convidados!</p>
+          </div>
+        </div>
       </div>
 
       {/* Navigation Tabs */}
-      <div className="sticky top-0 bg-background/95 backdrop-blur-sm border-b border-border z-10">
+      <div className="sticky top-0 bg-white/80 backdrop-blur-md border-b border-border/50 z-10 shadow-sm">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="flex space-x-1">
+          <div className="flex space-x-2 py-3">
             <Button
               variant={activeTab === 'stories' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('stories')}
-              className="flex-1"
+              className={`flex-1 transition-all duration-300 hover-scale ${
+                activeTab === 'stories' 
+                  ? 'bg-wedding-primary text-white shadow-lg' 
+                  : 'hover:bg-wedding-primary/10'
+              }`}
             >
               📱 Informações
             </Button>
             <Button
               variant={activeTab === 'gallery' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('gallery')}
-              className="flex-1"
+              className={`flex-1 transition-all duration-300 hover-scale ${
+                activeTab === 'gallery' 
+                  ? 'bg-wedding-primary text-white shadow-lg' 
+                  : 'hover:bg-wedding-primary/10'
+              }`}
             >
               📸 Galeria
             </Button>
             <Button
               variant={activeTab === 'messages' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('messages')}
-              className="flex-1"
+              className={`flex-1 transition-all duration-300 hover-scale ${
+                activeTab === 'messages' 
+                  ? 'bg-wedding-primary text-white shadow-lg' 
+                  : 'hover:bg-wedding-primary/10'
+              }`}
             >
               💌 Mensagens
             </Button>
@@ -174,7 +191,7 @@ const ConvidadosPage = () => {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-6">
+      <div className="max-w-5xl mx-auto px-4 py-8">
         {/* Stories Tab */}
         {activeTab === 'stories' && (
           <div className="space-y-8">
@@ -234,13 +251,15 @@ const ConvidadosPage = () => {
 
             {/* Selected Story Content - Full Width Card */}
             {selectedStory && (
-              <div className="animate-in slide-in-from-bottom-4 duration-500">
-                <Card className="border-0 shadow-elegant bg-gradient-to-br from-background to-wedding-pink-soft/30">
-                  <CardContent className="p-8">
-                    <div className="max-w-2xl mx-auto">
-                      {stories.find(s => s.id === selectedStory)?.content}
-                    </div>
-                  </CardContent>
+              <div className="animate-fade-in">
+                <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm rounded-3xl overflow-hidden">
+                  <div className="bg-gradient-to-r from-wedding-primary/10 to-wedding-accent/10 p-1">
+                    <CardContent className="bg-white rounded-3xl p-8 m-1">
+                      <div className="max-w-2xl mx-auto">
+                        {stories.find(s => s.id === selectedStory)?.content}
+                      </div>
+                    </CardContent>
+                  </div>
                 </Card>
               </div>
             )}
@@ -280,20 +299,25 @@ const ConvidadosPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-wedding-pink-soft py-8 mt-12">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-muted-foreground mb-4">
-            Obrigada por fazer parte do nosso grande dia! 🙏
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button variant="outline" size="sm">
-              <Share2 className="w-4 h-4 mr-2" />
-              Compartilhar
-            </Button>
-            <Button variant="outline" size="sm">
-              <Download className="w-4 h-4 mr-2" />
-              Baixar Fotos
-            </Button>
+      <footer className="relative overflow-hidden mt-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-wedding-primary/10 via-wedding-pink/20 to-wedding-accent/10"></div>
+        <div className="relative bg-white/60 backdrop-blur-sm py-12">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <div className="animate-fade-in">
+              <p className="text-lg text-muted-foreground mb-6 font-medium">
+                Obrigada por fazer parte do nosso grande dia! 🙏
+              </p>
+              <div className="flex justify-center gap-4">
+                <Button variant="outline" size="sm" className="hover-scale border-wedding-primary/30 hover:bg-wedding-primary/10">
+                  <Share2 className="w-4 h-4 mr-2" />
+                  Compartilhar
+                </Button>
+                <Button variant="outline" size="sm" className="hover-scale border-wedding-primary/30 hover:bg-wedding-primary/10">
+                  <Download className="w-4 h-4 mr-2" />
+                  Baixar Fotos
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
