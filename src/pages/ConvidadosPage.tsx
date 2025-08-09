@@ -193,10 +193,10 @@ const ConvidadosPage = () => {
                     <div className="relative">
                       <div className={`w-20 h-20 rounded-full p-1 transition-all duration-300 ${
                         selectedStory === story.id 
-                          ? 'bg-gradient-to-r from-wedding-pink via-wedding-pink-light to-wedding-pink scale-110' 
-                          : 'bg-gradient-to-r from-wedding-pink-soft to-wedding-pink-light group-hover:from-wedding-pink group-hover:to-wedding-pink-light'
+                          ? 'bg-white shadow-lg border-2 border-wedding-pink scale-110' 
+                          : 'bg-white shadow-md border border-gray-200 group-hover:shadow-lg group-hover:border-wedding-pink'
                       }`}>
-                        <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
+                        <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
                           {/* Emoji replacing icon */}
                           <div className={`transition-transform duration-300 ${
                             selectedStory === story.id ? 'scale-110' : 'group-hover:scale-105'
