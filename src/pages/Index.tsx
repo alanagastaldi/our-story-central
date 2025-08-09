@@ -445,14 +445,14 @@ const Index = () => {
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <Card key={index} className="bg-blue-500">
+              <Card key={index} className="bg-wedding-primary">
                 <CardContent className="p-0">
                   <button
-                    className="w-full p-6 text-left flex justify-between items-center hover:bg-blue-600 transition-colors"
+                    className="w-full p-6 text-left flex justify-between items-center hover:bg-wedding-blue transition-colors"
                     onClick={() => setFaqOpen(faqOpen === index ? null : index)}
                   >
-                    <span className="font-semibold text-white">{faq.question}</span>
-                    <ChevronDown className={`h-5 w-5 text-white transition-transform ${faqOpen === index ? 'rotate-180' : ''}`} />
+                    <span className="font-semibold text-wedding-dark">{faq.question}</span>
+                    <ChevronDown className={`h-5 w-5 text-wedding-dark transition-transform ${faqOpen === index ? 'rotate-180' : ''}`} />
                   </button>
                   {faqOpen === index && (
                     <div className="px-6 pb-6 bg-white">
