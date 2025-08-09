@@ -37,7 +37,7 @@ const CentralNoivas = () => {
     { id: "checklist", label: "Checklist", icon: ClipboardList, premium: false },
     { id: "presentes", label: "Lista de Presentes", icon: Gift, premium: false },
     { id: "enxoval", label: "Lista de Enxoval", icon: ShoppingBasket, premium: false },
-    { id: "design", label: "Editor de Design", icon: Palette, premium: true },
+    { id: "design", label: "Central dos Convidados", icon: Palette, premium: true },
     { id: "financeiro", label: "Painel Financeiro", icon: DollarSign, premium: true },
     { id: "moodboard", label: "Moodboard", icon: Image, premium: false },
     { id: "convidados", label: "Gestão de Convidados", icon: Users, premium: false },
@@ -78,7 +78,7 @@ const CentralNoivas = () => {
       onClick: () => setActiveSection("enxoval")
     },
     {
-      title: "Editor de Design",
+      title: "Central dos Convidados",
       description: "Personalize a central dos convidados",
       icon: Palette,
       color: "bg-gradient-to-br from-accent/20 to-accent/5 border-border/50",
