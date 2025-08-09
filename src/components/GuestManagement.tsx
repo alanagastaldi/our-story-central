@@ -322,7 +322,6 @@ const GuestManagement = () => {
                       <TableHead>Grupo/Família</TableHead>
                       <TableHead>Status</TableHead>
                       <TableHead>Contato</TableHead>
-                      <TableHead>Observações</TableHead>
                       <TableHead className="text-right">Ações</TableHead>
                     </TableRow>
                   </TableHeader>
@@ -340,9 +339,6 @@ const GuestManagement = () => {
                         </TableCell>
                         <TableCell className="text-sm text-muted-foreground">
                           {guest.contact}
-                        </TableCell>
-                        <TableCell className="text-sm text-muted-foreground max-w-32 truncate">
-                          {guest.notes || '-'}
                         </TableCell>
                         <TableCell>
                           <div className="flex justify-end gap-2">
