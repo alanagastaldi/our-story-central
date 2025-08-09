@@ -22,7 +22,8 @@ import {
   ChevronDown,
   Instagram,
   MessageCircle,
-  BookOpen
+  BookOpen,
+  Linkedin
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -536,6 +537,19 @@ const Index = () => {
               <a href="#funcionalidades" className="text-foreground/70 hover:text-foreground transition-colors">Funcionalidades</a>
               <a href="#planos" className="text-foreground/70 hover:text-foreground transition-colors">Planos</a>
               <a href="#depoimentos" className="text-foreground/70 hover:text-foreground transition-colors">Depoimentos</a>
+            </div>
+            <div className="flex justify-center space-x-6 mb-8">
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground transition-colors">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground transition-colors">
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
             </div>
             <div className="border-t border-foreground/20 pt-8">
               <p className="text-foreground/60 text-sm">
