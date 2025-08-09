@@ -191,20 +191,6 @@ const AddGuestModal: React.FC<AddGuestModalProps> = ({ isOpen, onClose, onAdd })
               />
             </div>
 
-            {/* Observações */}
-            <div>
-              <Label htmlFor="notes" className="text-sm font-medium">
-                Observações
-              </Label>
-              <Textarea
-                id="notes"
-                value={formData.notes}
-                onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                placeholder="Restrições alimentares, acompanhantes, etc."
-                rows={3}
-                className="mt-1"
-              />
-            </div>
           </div>
 
           {/* Botões */}
