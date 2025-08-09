@@ -261,7 +261,7 @@ const Index = () => {
             <div className="bg-gradient-to-br from-accent/50 to-accent/20 rounded-2xl p-8 h-80 flex items-center justify-center">
               <div className="text-center">
                 <Image className="h-16 w-16 text-foreground/60 mx-auto mb-4" />
-                <p className="text-foreground/60">Visualização do Mood Board</p>
+                <p className="text-foreground/60">Crie Pastas, Salve Referências, Ideias de Conteúdos, Fotos, Vídeos e Muito Mais...</p>
               </div>
             </div>
           </div>
