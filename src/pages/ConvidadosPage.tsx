@@ -178,6 +178,20 @@ const ConvidadosPage = () => {
         {/* Stories Tab */}
         {activeTab === 'stories' && (
           <div className="space-y-8">
+            {/* Welcome Message */}
+            <div className="flex justify-center">
+              <Card className="bg-white/90 backdrop-blur-sm border border-white/20 shadow-elegant rounded-3xl max-w-4xl mx-auto w-full">
+                <CardContent className="p-6">
+                  <div className="text-center animate-in fade-in duration-700">
+                    <h3 className="text-xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Toque nos círculos abaixo para ver todas as informações importantes sobre o nosso casamento
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
             {/* Stories Navigation - Instagram Style Centralizado */}
             <div className="flex justify-center">
               <div className="flex gap-8 overflow-x-auto scrollbar-hide px-4 py-6 max-w-4xl">
@@ -231,22 +245,6 @@ const ConvidadosPage = () => {
               </div>
             )}
 
-            {/* Welcome Message when no story selected */}
-            {!selectedStory && (
-              <div className="flex justify-center">
-                <Card className="bg-white/90 backdrop-blur-sm border border-white/20 shadow-elegant rounded-3xl max-w-4xl mx-auto w-full">
-                  <CardContent className="p-6">
-                    <div className="text-center animate-in fade-in duration-700">
-                      <div className="text-4xl mb-3">💕</div>
-                      <h3 className="text-xl font-bold text-primary mb-2">Bem-vindos ao nosso grande dia!</h3>
-                      <p className="text-muted-foreground mb-4">
-                        Toque nos círculos acima para ver todas as informações importantes sobre o nosso casamento
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
           </div>
         )}
 
