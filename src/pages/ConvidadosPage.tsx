@@ -90,6 +90,8 @@ const ConvidadosPage = () => {
           <h3 className="text-xl font-semibold text-primary">Confirmação de Presença</h3>
           <div className="space-y-3">
             <Input placeholder="Seu nome completo" />
+            <Input placeholder="Seu telefone" type="tel" />
+            <Input placeholder="Seu e-mail" type="email" />
             <div className="flex gap-2">
               <Button className="flex-1">✅ Vou sim!</Button>
               <Button variant="outline" className="flex-1">❌ Não posso ir</Button>
