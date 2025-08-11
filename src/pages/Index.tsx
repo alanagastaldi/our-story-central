@@ -512,15 +512,12 @@ const Index = () => {
           <p className="text-xl text-background/80 mb-12 max-w-2xl mx-auto leading-relaxed">
             Com a Central da Noiva, você se sente no controle — com apoio, beleza e clareza
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex justify-center">
             <Link to="/formulario-pos-pagamento">
-              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-10 py-4 rounded-lg transition-all duration-300 hover:shadow-xl">
-                Quero experimentar agora
+              <Button size="sm" className="bg-wedding-primary text-wedding-dark hover:bg-wedding-primary/90 px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg">
+                Experimentar agora
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-wedding-primary/30 text-wedding-dark hover:bg-wedding-primary hover:text-wedding-dark transition-all duration-300">
-              Ver todos os planos
-            </Button>
           </div>
         </div>
       </section>
