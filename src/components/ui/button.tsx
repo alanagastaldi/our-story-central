@@ -9,11 +9,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-wedding-blue text-wedding-dark hover:bg-wedding-primary",
+        default: "bg-wedding-blue-soft text-wedding-dark hover:bg-wedding-blue",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-wedding-blue bg-transparent text-wedding-dark hover:bg-wedding-blue hover:text-wedding-dark",
+          "border border-wedding-blue-soft bg-transparent text-wedding-dark hover:bg-wedding-blue-soft hover:text-wedding-dark",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
