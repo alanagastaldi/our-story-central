@@ -324,7 +324,7 @@ const FormularioPosPagamento = () => {
               <div className="text-center">
                 <Button
                   type="submit"
-                  className="h-14 px-12 rounded-xl bg-slate-800 text-white font-medium hover:bg-slate-700 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-800/30 transform hover:scale-105"
+                  className="w-full h-14 px-4 sm:px-12 rounded-xl bg-slate-800 text-white font-medium hover:bg-slate-700 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-800/30 transform hover:scale-105 text-sm sm:text-base"
                   disabled={form.formState.isSubmitting}
                 >
                   {form.formState.isSubmitting ? "Salvando..." : "Salvar e ir para a Central das Noivas"}
