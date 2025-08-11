@@ -39,7 +39,7 @@ const Index = () => {
     { icon: Users, title: "Central dos Convidados", description: "Área otimizada para seus convidados" },
     { icon: Edit3, title: "Designer estilo Canva", description: "Crie convites e materiais únicos" },
     { icon: Gift, title: "Lista de presentes", description: "Compartilhável e fácil de gerenciar" },
-    { icon: Mail, title: "E-mails automáticos", description: "Comunicação eficiente com convidados" }
+    { icon: Mail, title: "Gestão de convidados", description: "Comunicação eficiente com convidados" }
   ];
 
   const plans = [
