@@ -117,11 +117,11 @@ const CentralNoivas = () => {
         return (
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-serif font-bold text-black mb-2">Central das Noivas</h1>
-              <p className="text-foreground/70">Organize todos os detalhes do seu casamento em um só lugar</p>
+              <h1 className="text-2xl md:text-3xl font-serif font-bold text-black mb-2">Central das Noivas</h1>
+              <p className="text-sm md:text-base text-foreground/70">Organize todos os detalhes do seu casamento em um só lugar</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {dashboardCards.map((card) => (
                 <Card 
                   key={card.title}
@@ -131,9 +131,9 @@ const CentralNoivas = () => {
                   )}
                   onClick={card.onClick}
                 >
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 p-4 md:p-6">
                     <div className="flex items-center space-x-2">
-                      <card.icon className="h-6 w-6 text-foreground" />
+                      <card.icon className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
                       {card.premium && (
                         <Lock className="h-4 w-4 text-amber-600" />
                       )}
@@ -144,9 +144,9 @@ const CentralNoivas = () => {
                       </Badge>
                     )}
                   </CardHeader>
-                  <CardContent>
-                    <CardTitle className="text-lg mb-2 font-serif text-black">{card.title}</CardTitle>
-                    <p className="text-sm text-foreground/70">{card.description}</p>
+                  <CardContent className="p-4 md:p-6">
+                    <CardTitle className="text-base md:text-lg mb-2 font-serif text-black">{card.title}</CardTitle>
+                    <p className="text-xs md:text-sm text-foreground/70">{card.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -204,11 +204,11 @@ const CentralNoivas = () => {
       {/* Sidebar */}
       <div className={cn(
         "fixed left-0 top-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50 border-r border-border",
-        sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0 md:static md:w-64"
       )}>
-        <div className="p-6 border-b border-border">
+        <div className="p-4 md:p-6 border-b border-border">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-serif font-bold text-black">LovanaApp</h1>
+            <h1 className="text-lg md:text-xl font-serif font-bold text-black">LovanaApp</h1>
             <Button 
               variant="ghost" 
               size="sm" 
@@ -246,10 +246,10 @@ const CentralNoivas = () => {
       </div>
 
       {/* Main Content */}
-      <div className="md:ml-64">
+      <div className="md:ml-64 min-h-screen">
         {/* Header */}
         <header className="bg-white shadow-sm border-b border-border">
-          <div className="px-6 py-4 flex items-center justify-between">
+          <div className="px-4 md:px-6 py-4 flex items-center justify-between">
             <Button 
               variant="ghost" 
               size="sm" 
@@ -259,7 +259,7 @@ const CentralNoivas = () => {
               <Menu className="h-5 w-5" />
             </Button>
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm" className="border-foreground/20 text-foreground hover:bg-foreground hover:text-background">
+              <Button variant="outline" size="sm" className="border-foreground/20 text-foreground hover:bg-foreground hover:text-background text-xs md:text-sm hidden sm:block">
                 Ver Central Convidados
               </Button>
               <div className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center">
@@ -270,7 +270,7 @@ const CentralNoivas = () => {
         </header>
 
         {/* Content */}
-        <main className="p-6">
+        <main className="p-4 md:p-6">
           {renderContent()}
         </main>
       </div>
