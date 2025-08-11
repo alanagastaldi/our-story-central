@@ -444,14 +444,14 @@ const Index = () => {
       {/* Depoimento */}
       <section className="py-24 px-6 bg-gradient-to-br from-accent/30 to-background">
         <div className="container mx-auto max-w-4xl text-center">
-          <Card className="p-12 bg-white border-border/50 shadow-xl">
+          <Card className="p-6 md:p-12 bg-white border-border/50 shadow-xl">
             <CardContent className="p-0">
               <div className="flex justify-center mb-6">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <blockquote className="text-2xl text-foreground font-medium italic mb-6 font-serif">
+              <blockquote className="text-lg md:text-2xl text-foreground font-medium italic mb-6 font-serif leading-relaxed">
                 "Quando encontrei o app, percebi que eu não precisava mais dar conta de tudo sozinha. Cada detalhe ganhou espaço e eu finalmente pude respirar."
               </blockquote>
               <div className="flex items-center justify-center gap-4">
