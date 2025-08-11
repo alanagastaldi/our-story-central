@@ -38,11 +38,11 @@ All colors MUST be HSL.
     --ring: 0 0% 13%;
 
     /* Luxury Wedding Colors */
-    --wedding-blue: 215 100% 96%;
-    --wedding-blue-light: 215 80% 98%;
-    --wedding-blue-soft: 215 50% 95%;
+    --wedding-blue: 210 80% 95%; /* Azul bebê mais suave */
+    --wedding-blue-light: 210 60% 97%;
+    --wedding-blue-soft: 210 50% 96%;
     --wedding-dark: 0 0% 13%;
-    --wedding-primary: 215 100% 85%;
+    --wedding-primary: 210 80% 92%; /* Azul bebê suave para FAQ */
     
     /* Luxury shadows and effects */
     --shadow-elegant: 0 8px 32px -8px hsl(215 30% 70% / 0.3);
