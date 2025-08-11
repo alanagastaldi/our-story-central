@@ -518,7 +518,7 @@ const Index = () => {
                 Quero experimentar agora
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-background transition-all duration-300">
+            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-wedding-primary/30 text-wedding-dark hover:bg-wedding-primary hover:text-wedding-dark transition-all duration-300">
               Ver todos os planos
             </Button>
           </div>
