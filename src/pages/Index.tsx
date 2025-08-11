@@ -389,20 +389,20 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="planos" className="py-24 px-6 bg-gradient-to-br from-accent/30 to-background">
+      <section id="planos" className="py-12 md:py-24 px-4 md:px-6 bg-gradient-to-br from-accent/30 to-background">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-black mb-6">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-black mb-4 md:mb-6">
               Planos de Investimento
             </h2>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
               Escolha a experiência que mais combina com o seu estilo de planejamento
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {plans.map((plan, index) => (
-              <Card key={index} className={`relative p-8 bg-white border-2 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${plan.popular ? 'border-foreground shadow-xl scale-105' : 'border-border'}`}>
+              <Card key={index} className={`relative p-4 md:p-8 bg-white border-2 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${plan.popular ? 'border-foreground shadow-xl md:scale-105' : 'border-border'}`}>
                 {plan.popular && (
                   <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-foreground text-background px-4 py-1 text-sm font-medium">
                     Mais Escolhido
@@ -410,18 +410,18 @@ const Index = () => {
                 )}
                 <CardContent className="p-0 space-y-6">
                   <div className="text-center">
-                    <h3 className="text-2xl font-serif font-bold text-foreground mb-4">{plan.name}</h3>
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground mb-4">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                      <span className="text-foreground/60 ml-2">{plan.period}</span>
+                      <span className="text-3xl md:text-4xl font-bold text-foreground">{plan.price}</span>
+                      <span className="text-foreground/60 ml-2 text-sm md:text-base">{plan.period}</span>
                     </div>
                   </div>
                   
-                  <ul className="space-y-4">
+                  <ul className="space-y-3 md:space-y-4">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <CheckSquare className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
-                        <span className={`text-foreground/80 ${feature.includes('bloqueado') ? 'line-through text-foreground/50' : ''}`}>
+                        <span className={`text-sm md:text-base text-foreground/80 ${feature.includes('bloqueado') ? 'line-through text-foreground/50' : ''}`}>
                           {feature}
                         </span>
                       </li>
