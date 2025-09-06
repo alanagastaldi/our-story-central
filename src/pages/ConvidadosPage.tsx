@@ -143,7 +143,7 @@ const ConvidadosPage = () => {
         <div className="relative text-center py-16 px-4">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-wedding-primary to-wedding-accent bg-clip-text text-transparent mb-4">
-              Ana & Carlos 💕
+              Luiza & Jonas 💕
             </h1>
             <p className="text-lg text-muted-foreground font-medium">Bem-vindos à Central dos Convidados!</p>
           </div>
