@@ -29,10 +29,10 @@ const ConvidadosPage = () => {
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-primary">Horário da Cerimônia</h3>
           <div className="space-y-2">
-            <p className="text-muted-foreground">📅 <strong>Data:</strong> 15 de Junho, 2024</p>
-            <p className="text-muted-foreground">⏰ <strong>Cerimônia:</strong> 16h00</p>
-            <p className="text-muted-foreground">🎉 <strong>Festa:</strong> 18h00</p>
-            <p className="text-muted-foreground">🌅 <strong>Término:</strong> 02h00</p>
+            <p className="text-muted-foreground">📅 <strong>Data:</strong> 21 de Dezembro, 2025</p>
+            <p className="text-muted-foreground">⏰ <strong>Cerimônia:</strong> 11h00</p>
+            <p className="text-muted-foreground">🎉 <strong>Festa:</strong> 11h00</p>
+            <p className="text-muted-foreground">🌅 <strong>Término:</strong> 17h00</p>
           </div>
         </div>
       )
@@ -47,8 +47,8 @@ const ConvidadosPage = () => {
           <h3 className="text-xl font-semibold text-primary">Local do Evento</h3>
           <div className="space-y-3">
             <div>
-              <p className="font-medium">Fazenda Vista Alegre</p>
-              <p className="text-muted-foreground">Rua das Flores, 123 - Campo Belo, SP</p>
+              <p className="font-medium">Sociedade Recreativa Mampituba</p>
+              <p className="text-muted-foreground">Salão Abílio Machado da Rosa - Criciúma, Santa Catarina</p>
             </div>
             <Button className="w-full" onClick={() => window.open('https://maps.google.com', '_blank')}>
               <MapPin className="w-4 h-4 mr-2" />
