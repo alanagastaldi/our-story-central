@@ -40,8 +40,10 @@ const WeddingStory = () => {
         <div className="text-center space-y-3">
           <h3 className="text-xl font-semibold text-primary">Horário da Cerimônia</h3>
           <div className="space-y-2">
-            <p className="text-lg font-medium">15h30 - Cerimônia</p>
-            <p className="text-lg font-medium">17h00 - Festa</p>
+            <p className="text-lg font-medium">📅 Data: 21 de Dezembro, 2025</p>
+            <p className="text-lg font-medium">⏰ Cerimônia: 11h00</p>
+            <p className="text-lg font-medium">🎉 Festa: 11h00</p>
+            <p className="text-lg font-medium">🌅 Término: 17h00</p>
             <p className="text-muted-foreground text-sm">Não se atrase! 💕</p>
           </div>
         </div>
@@ -56,9 +58,9 @@ const WeddingStory = () => {
         <div className="text-center space-y-4">
           <h3 className="text-xl font-semibold text-primary">Local do Evento</h3>
           <div className="space-y-2">
-            <p className="font-medium">Fazenda Vista Alegre</p>
-            <p className="text-sm text-muted-foreground">Rua das Flores, 123</p>
-            <p className="text-sm text-muted-foreground">Cidade dos Sonhos</p>
+            <p className="font-medium">Sociedade Recreativa Mampituba</p>
+            <p className="text-sm text-muted-foreground">Salão Abílio Machado da Rosa</p>
+            <p className="text-sm text-muted-foreground">Criciúma, Santa Catarina</p>
           </div>
           <Button 
             className="w-full"
