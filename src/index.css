@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury Wedding Theme Colors - Light green + Dark gray */
-    --background: 85 25% 96%; /* Light green #F0F5E8 */
+    /* Luxury Wedding Theme Colors - Dark green + Dark gray */
+    --background: 120 20% 92%; /* Dark green background */
     --foreground: 0 0% 29%; /* Dark gray #4A4A4A */
 
     --card: 0 0% 100%;
@@ -21,38 +21,38 @@ All colors MUST be HSL.
     --primary: 0 0% 13%; /* Rich black */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 85 25% 96%; /* Light green */
+    --secondary: 120 20% 92%; /* Dark green */
     --secondary-foreground: 0 0% 13%;
 
-    --muted: 85 20% 93%;
+    --muted: 120 15% 88%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 85 25% 92%;
+    --accent: 120 20% 87%;
     --accent-foreground: 0 0% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
 
-    --border: 85 15% 85%;
-    --input: 85 15% 85%;
+    --border: 120 15% 80%;
+    --input: 120 15% 80%;
     --ring: 0 0% 13%;
 
-    /* Luxury Wedding Colors - Green Olive Theme */
-    --wedding-blue: 75 30% 90%; /* Verde oliva suave */
-    --wedding-blue-light: 80 25% 94%;
-    --wedding-blue-soft: 85 20% 92%;
-    --wedding-pink: 85 25% 88%; /* Verde claro */
-    --wedding-pink-light: 85 20% 92%; /* Verde muito claro */
-    --wedding-pink-soft: 85 15% 90%; /* Verde suave */
-    --wedding-accent: 75 35% 85%; /* Verde accent */
+    /* Luxury Wedding Colors - Dark Green Theme */
+    --wedding-blue: 120 25% 82%; /* Verde escuro suave */
+    --wedding-blue-light: 120 20% 85%;
+    --wedding-blue-soft: 120 18% 88%;
+    --wedding-pink: 120 22% 80%; /* Verde escuro */
+    --wedding-pink-light: 120 18% 84%; /* Verde escuro claro */
+    --wedding-pink-soft: 120 15% 86%; /* Verde escuro suave */
+    --wedding-accent: 120 30% 75%; /* Verde escuro accent */
     --wedding-dark: 0 0% 13%;
-    --wedding-primary: 75 35% 88%; /* Verde oliva suave para FAQ */
+    --wedding-primary: 120 25% 78%; /* Verde escuro para FAQ */
     
     /* Luxury shadows and effects */
-    --shadow-elegant: 0 8px 32px -8px hsl(85 20% 70% / 0.3);
-    --shadow-story: 0 4px 20px -4px hsl(85 20% 75% / 0.25);
-    --gradient-story: linear-gradient(135deg, hsl(85 25% 96%), hsl(85 20% 98%));
-    --gradient-hero: linear-gradient(180deg, hsl(85 25% 96%), hsl(0 0% 100%));
+    --shadow-elegant: 0 8px 32px -8px hsl(120 20% 65% / 0.3);
+    --shadow-story: 0 4px 20px -4px hsl(120 20% 70% / 0.25);
+    --gradient-story: linear-gradient(135deg, hsl(120 20% 92%), hsl(120 15% 94%));
+    --gradient-hero: linear-gradient(180deg, hsl(120 20% 92%), hsl(0 0% 100%));
 
     --radius: 0.5rem;
 
@@ -72,11 +72,11 @@ All colors MUST be HSL.
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Design Editor Colors - Green Olive Theme */
-    --editor-primary: 75 30% 85%; /* Verde oliva */
+    /* Design Editor Colors - Dark Green Theme */
+    --editor-primary: 120 25% 75%; /* Verde escuro */
     --editor-secondary: 0 0% 29%; /* #4A4A4A - Cinza chumbo */
-    --editor-accent: 85 25% 90%; /* Verde claro */
-    --editor-border: 85 15% 80%;
+    --editor-accent: 120 20% 82%; /* Verde escuro claro */
+    --editor-border: 120 15% 75%;
   }
 
   .dark {
