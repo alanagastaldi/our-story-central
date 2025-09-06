@@ -17,7 +17,7 @@ interface StoryItem {
 
 const ConvidadosPage = () => {
   const [selectedStory, setSelectedStory] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'stories' | 'gallery' | 'messages'>('stories');
+  const [activeTab, setActiveTab] = useState<'stories' | 'convite' | 'gallery' | 'messages'>('stories');
 
   const stories: StoryItem[] = [
     {
@@ -167,6 +167,18 @@ const ConvidadosPage = () => {
               📱 Informações
             </Button>
             <Button
+              variant={activeTab === 'convite' ? 'default' : 'ghost'}
+              onClick={() => setActiveTab('convite')}
+              size="sm"
+              className={`flex-1 min-w-[100px] transition-all duration-300 text-xs sm:text-sm ${
+                activeTab === 'convite' 
+                  ? 'bg-wedding-primary text-white shadow-lg' 
+                  : 'hover:bg-wedding-primary/10'
+              }`}
+            >
+              💌 Convite Digital
+            </Button>
+            <Button
               variant={activeTab === 'gallery' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('gallery')}
               size="sm"
@@ -267,6 +279,58 @@ const ConvidadosPage = () => {
               </div>
             )}
 
+          </div>
+        )}
+
+        {/* Convite Digital Tab */}
+        {activeTab === 'convite' && (
+          <div className="space-y-6">
+            <div className="text-center max-w-2xl mx-auto">
+              <h2 className="text-2xl font-bold text-primary mb-2">💌 Convite Digital</h2>
+              <p className="text-muted-foreground mb-6">Nosso convite oficial para o grande dia!</p>
+            </div>
+            
+            <div className="max-w-2xl mx-auto">
+              <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl overflow-hidden">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-col items-center space-y-4">
+                    <img 
+                      src="/lovable-uploads/e6cc0359-f5d3-4e0c-ad48-483557116e8b.png" 
+                      alt="Convite de Casamento - Luiza & Jonas" 
+                      className="w-full max-w-md rounded-lg shadow-lg"
+                    />
+                    <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+                      <Button 
+                        className="flex-1" 
+                        onClick={() => window.open('/lovable-uploads/e6cc0359-f5d3-4e0c-ad48-483557116e8b.png', '_blank')}
+                      >
+                        <Download className="w-4 h-4 mr-2" />
+                        Baixar Convite
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        className="flex-1"
+                        onClick={() => {
+                          if (navigator.share) {
+                            navigator.share({
+                              title: 'Convite de Casamento - Luiza & Jonas',
+                              text: 'Você está convidado para o nosso casamento!',
+                              url: window.location.href
+                            });
+                          } else {
+                            navigator.clipboard.writeText(window.location.href);
+                            alert('Link copiado para a área de transferência!');
+                          }
+                        }}
+                      >
+                        <Share2 className="w-4 h-4 mr-2" />
+                        Compartilhar
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         )}
 
