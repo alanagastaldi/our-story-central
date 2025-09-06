@@ -61,6 +61,10 @@ export default {
 					blue: 'hsl(var(--wedding-blue))',
 					'blue-light': 'hsl(var(--wedding-blue-light))',
 					'blue-soft': 'hsl(var(--wedding-blue-soft))',
+					pink: 'hsl(var(--wedding-pink))',
+					'pink-light': 'hsl(var(--wedding-pink-light))',
+					'pink-soft': 'hsl(var(--wedding-pink-soft))',
+					accent: 'hsl(var(--wedding-accent))',
 					dark: 'hsl(var(--wedding-dark))',
 					primary: 'hsl(var(--wedding-primary))'
 				},
